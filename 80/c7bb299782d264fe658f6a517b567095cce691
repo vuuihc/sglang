@@ -1,0 +1,87 @@
+python/sglang/srt/mem_cache/hiradix_cache.py
+  4f99d2c4aad8af16 806-807,812,816-836
+python/sglang/srt/mem_cache/hi_mamba_radix_cache.py
+  4f99d2c4aad8af16 431-432,436,440-452
+python/sglang/srt/mem_cache/hybrid_cache/hybrid_cache_controller.py
+  4f99d2c4aad8af16 372
+python/sglang/srt/observability/metrics_collector.py
+  84541776764686aa 1881-1887 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a15b8bf5b179ef7ca557180","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1881,1887]}]}]}
+  4f99d2c4aad8af16 1880,1888
+python/sglang/srt/mem_cache/unified_radix_cache.py
+  4f99d2c4aad8af16 1427-1428,1431,1434-1447
+python/sglang/srt/managers/cache_controller.py
+  4f99d2c4aad8af16 189,362-364,759-762,872
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.4",
+  "base_commit_sha": "80c7bb299782d264fe658f6a517b567095cce691",
+  "prompts": {
+    "4f99d2c4aad8af16": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a157e0b5b179ef7ca556f36",
+        "model": "qwen-3.6-plus__dev"
+      },
+      "human_author": "vuuihc <vuuihc@users.noreply.github.com>",
+      "messages": [],
+      "total_additions": 58,
+      "total_deletions": 17,
+      "accepted_lines": 69,
+      "overriden_lines": 0
+    },
+    "84541776764686aa": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a159cf15b179ef7ca55707e",
+        "model": "qwen-3.6-plus__dev"
+      },
+      "human_author": null,
+      "messages": [],
+      "total_additions": 25917,
+      "total_deletions": 20,
+      "accepted_lines": 25915,
+      "overriden_lines": 0
+    }
+  },
+  "attestation_metadata": {
+    "python/sglang/srt/observability/metrics_collector.py": [
+      {
+        "hash": "84541776764686aa",
+        "line_ranges": [
+          {
+            "Range": [
+              1881,
+              1887
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a15b8bf5b179ef7ca557180",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1881,
+                  1887
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "remote_transcripts": {
+    "84541776764686aa": {
+      "tool": "trae",
+      "conversation_id": "6a159cf15b179ef7ca55707e",
+      "session_id": "6a159cf15b179ef7ca55707e",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    }
+  }
+}
