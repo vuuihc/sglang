@@ -1,4 +1,4 @@
-# 模块四：并行与分布式
+# 模块四：并行与分布式 + MLA 深度解析
 
 > 基于 SGLang 代码库的面试备考精华笔记
 
@@ -28,7 +28,6 @@ RowParallelLinear（out_proj / FFN down）：
 - 通信确实在 matmul 之后，但 Column 用 AllGather，Row 用 AllReduce
 - Column + Row 配对才构成完整 TP 块
 - 一个 transformer layer 通常只有一次 AllReduce（在 Row 之后），不是每个 matmul 后都通信
-- AllGather 在输出需要完整结果时使用（如最后一层输出），中间层通常不做
 
 ```python
 # ColumnParallelLinear.forward (linear.py:467)
@@ -64,7 +63,11 @@ step 3 combine（All-to-All）：
 
 代码：`layers/moe/topk.py:62-76`，`dispatch_indx` 和 `combine_indx` 对称存在。
 
-moe_a2a_backend（`server_args.py:608`）：支持 deepep、ascend_fuseep 等不同后端。
+### 为什么是 All-to-All 而不是 one-to-all
+
+EP 必须与 DP 配合：batch 中的 token 分布在各 GPU（DP 分片），每个 token 路由到 top-k 个 expert，这些 expert 可能在任意 GPU 上。因此**每个 GPU 都要向其他每个 GPU 发送 token，也要接收**，是真正的多对多。
+
+如果 token 全在一张卡上（无 DP），dispatch 方向是 one-to-many，combine 是 many-to-one。但这种情况在实际 EP 部署中不存在。
 
 ### 与 TP 的区别
 
@@ -77,58 +80,175 @@ moe_a2a_backend（`server_args.py:608`）：支持 deepep、ascend_fuseep 等不
 
 ---
 
-## Q15：MLA（Multi-head Latent Attention）压缩机制
+## Q15：MLA（Multi-head Latent Attention）深度解析
 
-### 核心思想
+### 1. 核心参数（DeepSeek-V2）
 
-MLA 把 KV cache 从 `num_heads × head_dim × 2` 压缩到 `kv_lora_rank + qk_rope_head_dim`。
-
-DeepSeek-V2 具体数字：`kv_lora_rank = 512`，`hidden_dim = 7168`，压缩比约 14x。
-
-```python
-# deepseek_v2.py:1370+
-kv_a_proj_with_mqa:  # hidden_dim → kv_lora_rank + qk_rope_head_dim
-kv_a_layernorm:      # RMSNorm on kv_lora_rank（压缩后做归一化）
+```
+hidden_size      = 5120
+num_heads        = 128
+qk_nope_head_dim = 128   ← Q/K 中不带 RoPE 的部分
+qk_rope_head_dim = 64    ← Q/K 中带 RoPE 的部分
+v_head_dim       = 128
+kv_lora_rank     = 512   ← KV 压缩维度（关键）
+q_lora_rank      = 1536  ← Q 也做了低秩压缩
 ```
 
-### RoPE 解耦（关键设计）
+### 2. Q 也有低秩压缩（q_b_proj）
 
-标准 MHA 中 RoPE 施加于 K，但压缩后的 latent 不能直接加 RoPE（解压后才能施加）。
+MLA 对 Q 同样做了 LoRA 式压缩（代码：`deepseek_v2.py:1445`）：
 
-MLA 的解法：把 K 拆成两部分：
-- `kv_lora_rank`：无 RoPE，**可以压缩存入 KV cache**
-- `qk_rope_head_dim`：带 RoPE，不压缩，也存入 KV cache（但维度小）
+```
+标准 MHA Q：h(5120) → W_Q(5120,24576) → [128 heads, 192]  参数量：1.26 亿
 
-KV cache 存储的是 `[kv_lora_rank + qk_rope_head_dim]`，而不是解压后的全量 KV。
+MLA Q（两步）：
+  q_a_proj：h(5120) → c_Q(1536)                参数量：787万
+  q_a_layernorm：RMSNorm(c_Q)
+  q_b_proj：c_Q(1536) → [128 heads, 192]        参数量：3774万
+  合计：4561万，节省约 63%
+```
 
-### Absorb 优化
+### 3. KV cache 存什么
 
-推理时可以把解压矩阵 absorb 进 Q/O 投影（矩阵合并），不存解压后的 K/V，直接用压缩 latent 做 attention，进一步减少显存和计算。
+```
+输入 h(5120) → kv_a_proj(5120→576) → [c_KV(512) | k_pe(64)]
+                                         ↓           ↓
+                                      无 RoPE      带 RoPE
+                                      进 cache     进 cache
+
+KV cache 每 token 存：576 个值
+标准 MHA 每 token 存：128 × 128 × 2 = 32768 个值
+压缩比：57×
+```
+
+### 4. E2E Forward（以 decode 单 token 为例）
+
+```
+Step 1  输入投影（1 次 forward）
+  h(1,5120) → fused_a_proj → [c_Q(1,1536) | c_KV(1,512) | k_pe(1,64)]
+  写入 KV cache：[c_KV(512) | k_pe(64)] = 576 值
+
+Step 2  Q 展开
+  c_Q(1,1536) → q_a_layernorm → q_b_proj → [q_nope(1,128h,128) | q_pe(1,128h,64)]
+  对 q_pe 施加 RoPE（当前位置）
+
+Step 3  从 cache 读历史 K/V
+  c_KV(seq,512),  k_pe(seq,64) ← 读出所有历史 token
+
+Step 4  Attention（标准多头）
+  K = [解压k_nope(seq,128h,128) | k_pe_rotated(seq,128h,64)]
+  Q @ K^T → scores(1,128h,seq) → softmax → attn_weights
+  attn_weights @ V(seq,128h,128) → output(1,128h,128)
+
+Step 5  输出
+  concat all heads(1,16384) → o_proj(16384→5120)
+```
+
+### 5. Absorb 优化：把"解压 K/V"这步彻底消掉
+
+**问题：** Step 3 读出 c_KV(seq,512) 后，要解压成 K_nope(seq,128h,128)，这是个大张量。
+
+**数学变换（以头 h 为例，标注每步 shape）：**
+
+```
+原始 attention score：
+  scores_h = Q_nope_h (1,128)  @  K_nope_h^T (128,seq)
+
+代入 K_nope_h 的定义  K_nope_h = c_KV (seq,512) @ W_kv_b_K_h (512,128)：
+
+  = Q_nope_h (1,128)
+    @
+    [c_KV (seq,512) @ W_kv_b_K_h (512,128)]^T
+
+展开转置  [AB]^T = B^T A^T：
+
+  = Q_nope_h (1,128)  @  W_kv_b_K_h^T (128,512)  @  c_KV^T (512,seq)
+
+重新加括号（结合律）：
+
+  = [Q_nope_h (1,128)  @  W_kv_b_K_h^T (128,512)]  @  c_KV^T (512,seq)
+     └──────────────── Q_absorbed_h (1,512) ────────┘
+
+  = Q_absorbed_h (1,512)  @  c_KV^T (512,seq)  →  scores_h (1,seq)
+```
+
+W_kv_b_K_h 从 **K 侧消失**，被挪进了 Q 侧。K 侧只剩 c_KV(seq,512)，无头编号。
+
+**Offline 权重合并（模型加载时一次性）：**
+```
+W_absorb_h = W_q_b_nope_h (1536,128) @ W_kv_b_K_h^T (128,512) → (1536,512)
+替换 q_b_proj 的 nope 权重，forward 时直接：
+  c_Q (1,1536) @ W_absorb_h (1536,512) → Q_absorbed_h (1,512)
+```
+
+V 侧同理（加权 c_KV 后再过 W_kv_b_V，并与 o_proj 合并）。
+
+### 6. Absorb 后 K/V 的真实形状：MQA
+
+```
+Q_absorbed_all: (1, 128 heads, 512)  ← 128 个不同的 Q（W_absorb_h per head 不同）
+c_KV (cache):   (seq, 1 head,  512)  ← 只有 1 头，被 128 个 Q 头共享！
+
+Attention：(1,128h,512) @ broadcast(seq,1h,512)^T → (1,128h,seq)
+           128 个头 scores 不同，因为 Q_absorbed_h 不同
+           K 侧始终只有 1 头，无需解压
+```
+
+128 头的多样性全部在 Q 侧体现（每头有不同的 W_absorb_h），K/V 侧是 MQA（1 头）。
+
+### 7. Absorb 的计算量 tradeoff
+
+```
+标准 MHA attention FLOPs：
+  Q(1,128h,128) @ K^T(128h,128,seq) + attn @ V(128h,seq,128)
+  = 2 × 128 × 128 × seq = 32768 × seq
+
+MLA Absorb attention FLOPs：
+  Q_absorbed(1,128h,512) @ c_KV^T(512,seq) + attn @ c_KV(seq,512)
+  = 2 × 128 × 512 × seq = 131072 × seq   ← FLOPs 多 4×
+
+但 KV cache 读取带宽：
+  标准 MHA：seq × 32768 values
+  MLA：      seq × 576 values             ← 带宽少 57×
+```
+
+Decode 是 memory-bandwidth bound，GPU compute 单元大量空闲。多出的 4× FLOPs 打到空闲 compute 上，不增加 wall clock time；少搬运 57× 数据直接减少耗时。Absorb 本质是**用计算换带宽**，在 decode 场景下是合算的。
 
 ---
 
 ## Q16：Pipeline Parallelism 的 Bubble 比例
+
+### Microbatch 是什么
+
+PP 把模型按层切成 P 段。若不拆 batch，各 GPU 只能顺序等待（GPU 0 算完才给 GPU 1），大量空转。
+
+引入 m 个 microbatch（把 batch 切成 m 小块依次送入）：
+
+```
+t1: GPU0:mb1  GPU1:---  GPU2:---  GPU3:---
+t2: GPU0:mb2  GPU1:mb1  GPU2:---  GPU3:---
+t3: GPU0:mb3  GPU1:mb2  GPU2:mb1  GPU3:---
+t4: GPU0:mb4  GPU1:mb3  GPU2:mb2  GPU3:mb1  ← 流水线满
+t5: GPU0:---  GPU1:mb4  GPU2:mb3  GPU3:mb2
+t6: GPU0:---  GPU1:---  GPU2:mb4  GPU3:mb3
+t7: GPU0:---  GPU1:---  GPU2:---  GPU3:mb4
+
+总时长 = m + p - 1 = 4 + 4 - 1 = 7
+有效计算 = m = 4，空转 = p - 1 = 3
+```
 
 ### 公式
 
 ```
 bubble_ratio = (p - 1) / (m + p - 1)
 
-p = pipeline stages（流水线级数）
-m = microbatches（一次 step 切成几个 microbatch）
+m=1, p=4：3/4 = 75% 空转
+m=4, p=4：3/7 = 43%
+m=8, p=4：3/11 = 27%
+m→∞：    → 0%
 ```
 
-### 直觉
-
-- m >> p 时：`bubble_ratio → 1/m → 0`，bubble 可忽略
-- m = 1 时：`bubble_ratio = (p-1)/p`，接近全量空转（只有 1/p 有效计算）
-- p = 1 时：无 bubble（单卡，但也没有 PP 加速）
-
-**结论：** microbatch 数量 m 越大（"连续跑的时间越长"），首尾 bubble 的比例越小。这也是为什么 PP 适合大 batch 训练，推理场景（batch 小）PP 效率较低。
-
-### SGLang 现状
-
-SGLang 推理以 **TP + EP** 为主要并行策略，PP 支持有限（主要依赖 HF 的 `device_map` 做 naive PP）。EP 在 MoE 模型（DeepSeek 系列）中是核心并行维度。
+m 越大，流水线利用率越高。PP 适合大 batch 训练，推理 batch 小时效率较低。SGLang 推理以 TP + EP 为主，PP 支持有限。
 
 ---
 
