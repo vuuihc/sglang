@@ -157,3 +157,107 @@ compile_config.add_split_op("sglang.moe_forward_piecewise_cuda_graph_impl")
 | torch.compile 融合 | 有限 | ✅ 每段配合 compile 做 kernel fusion |
 
 核心设计：把"可静态 capture 的计算密集段"与"必须动态执行的通信/attention"分离，前者用图加速，后者正常执行，交替运行。
+
+---
+
+## 补充：三种优化的关系与边界
+
+### CUDA Graph / torch.compile / Triton autotuning 的分工
+
+```
+三者优化不同层次的瓶颈，可以叠加组合：
+
+Triton autotuning：单个 kernel 内部参数调优（block_size/num_warps/num_stages）
+torch.compile：   减少 kernel 数量（op fusion），生成 Triton kernel
+CUDA Graph：      消除 kernel 调度的 CPU-GPU 往返延迟
+
+组合顺序（PiecewiseCudaGraphRunner）：
+  torch.compile（inductor）→ 生成 Triton kernel
+  → autotuning 选最优配置
+  → CUDA Graph capture 录制调度序列
+  → 推理时 graph.replay() 一次触发
+```
+
+### Triton 的 num_stages（不是 PP）
+
+Triton autotuning 里的 `num_stages` 是**单 kernel 内部的软件流水线**，与 Pipeline Parallelism 无关：
+
+```
+目的：隐藏 HBM 读取延迟（~300 cycles）
+
+不流水（stages=1）：
+  Load tile N from HBM → [等待] → Compute tile N → Load tile N+1 → [等待] → ...
+
+流水（stages=2）：
+  Load tile N+1 的 prefetch 在 Compute tile N 期间发出
+  → Load 和 Compute 重叠，HBM 延迟被隐藏
+
+代价：每多一个 stage 需要多缓存一个 tile → 寄存器压力增加
+autotuning 找到 latency hiding 和寄存器压力的最优平衡点
+```
+
+类比 CPU 上的 cache prefetch，是线程束级别的流水，不涉及多 GPU 通信。
+
+### torch.compile 的 kernel fusion 边界
+
+**能做的（计算图级别，op 之间）：**
+
+```python
+# 三个独立 op → 一个 Triton kernel
+silu(gate) * up   # silu + elementwise mul → fused
+                  # 中间结果留在寄存器，不写 HBM
+```
+
+inductor 遍历 computation graph，把相邻的 pointwise/elementwise op cluster 合并，
+生成一个覆盖所有这些 op 的 Triton kernel。
+
+**做不到的（tile/线程级别，需手写）：**
+
+```
+FlashAttention = Q@K^T → softmax → @V
+
+inductor 看到：matmul → softmax → matmul，无法自动融合，因为：
+  softmax 需要看完整一行（N 个 score）才能归一化
+  FlashAttention 需要手动 tile Q/K/V、在 SRAM 里维护 running max/sum
+  跨多个 tile 的状态依赖（online softmax）是编译器无法自动推导的
+```
+
+| 融合类型 | torch.compile 能做 | 需要手写 kernel |
+|---|---|---|
+| 融合粒度 | op 间（计算图级别） | tile/thread 级别（SRAM 管理）|
+| 适用 op | pointwise、epilogue、reduction | 跨 tile 的状态依赖 |
+| 典型例子 | SiLU + mul、LayerNorm | FlashAttention、split-k decode |
+
+### PiecewiseCudaGraph：为什么 attention 不能进图
+
+能 capture 进图的条件：**执行时所有参数（地址、shape、kernel config）必须与 capture 时完全一致。**
+
+```
+FFN 线性层（可 capture）：
+  num_tokens 在 bucket 内固定 → shape 固定
+  weight 地址固定（模型权重不动）
+  → ✓
+
+Attention kernel（不可 capture，图外执行）：
+  KV cache slot 编号：每次请求不同 → 动态指针
+  每个序列的 seq_len：可变 → 动态 mask
+  paged KV 的地址查找表：每次 forward 都可能不同
+  → ✗
+
+AllReduce（不可 capture）：
+  NCCL 通信涉及 GPU 间协调，内部有动态状态
+  → ✗
+```
+
+实际执行结构（以一个 transformer layer 为例）：
+
+```
+graph.replay() → QKV proj（固定 shape，图内）
+[图外 eager]   → attention kernel（动态 KV slot）
+graph.replay() → O proj（固定 shape，图内）
+[图外 eager]   → AllReduce（TP 通信）
+graph.replay() → FFN gate/up/down（固定 shape，图内）
+[图外 eager]   → AllReduce
+```
+
+"Piecewise"的名字由此而来：多段独立 CUDA graph，段间夹着不可 capture 的动态 op。
