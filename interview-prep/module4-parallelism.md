@@ -252,6 +252,124 @@ m 越大，流水线利用率越高。PP 适合大 batch 训练，推理 batch �
 
 ---
 
+---
+
+## EP 补充：常见追问
+
+### EP + DP 的具体例子（为什么需要 DP）
+
+```
+4 GPU，64 expert，每 GPU 持有 16 个 expert：
+  GPU 0：expert 0-15
+  GPU 1：expert 16-31
+  GPU 2：expert 32-47
+  GPU 3：expert 48-63
+
+没有 DP（所有 token 在 GPU 0）：
+  Dispatch：GPU 0 → GPU 1, 2, 3    one-to-many
+  Combine： GPU 1, 2, 3 → GPU 0    many-to-one
+  GPU 3 可能全程空闲，GPU 0 是瓶颈
+
+加上 DP（每个 GPU 处理不同请求）：
+  GPU 0 有 token A, B；GPU 1 有 token C, D...
+  token A（在 GPU 0）→ expert 17(GPU 1) + expert 35(GPU 2)
+  token C（在 GPU 1）→ expert 3(GPU 0) + expert 49(GPU 3)
+  → 每个 GPU 都要发送也要接收 → 真正的 All-to-All
+```
+
+### EP 和 TP 能同时用吗
+
+可以，DeepSeek 标准部署就是 TP + EP：
+- Attention 层：TP（节点内多卡，AllReduce）
+- MoE FFN 层：EP（跨节点，All-to-All × 2）
+- 单个大 expert 本身也可以再做 TP
+
+### EP 路由是 per-token 独立的
+
+```
+router_logits = token_hidden_states @ W_router  # (total_tokens, num_experts)
+top_k = argmax(router_logits, k=2)              # (total_tokens, 2) ← 每 token 独立选
+
+token A：expert 3, expert 17
+token B：expert 5, expert 22    ← 和 A 不同
+token C：expert 8, expert 17    ← 和 A 部分重叠
+```
+
+All-to-All 把每个 token 精准发到它选中的 top-k expert GPU，不是广播后 discard。
+
+### dispatch + combine 是两次独立的 All-to-All 调用
+
+```
+all_to_all_dispatch()   ← 第一次：token → expert GPU
+expert_compute()        ← FFN 计算，无通信
+all_to_all_combine()    ← 第二次：结果 → 回到来源 GPU，加权合并
+```
+
+deepep 库里就是 `dispatch()` 和 `combine()` 两个独立 API。
+
+### All-to-All 的同步是天然的
+
+All-to-All 不需要额外协调：每次 run_batch 里，attention 层的 TP AllReduce 已经是一个同步点，AllReduce 结束时所有 GPU 同时完成 attention，自然一起进入 MoE FFN 层发起 All-to-All。
+
+---
+
+## Mixed Batch 与 Attention Kernel 差异
+
+### Mixed batch 的实际执行
+
+```
+线性层（QKV 投影、FFN 等）：
+  所有 token（prefill + decode）拼成一个大 tensor：
+  input: (total_tokens, hidden_dim)
+  → 一个大矩阵乘，GPU 一视同仁
+  → TP AllReduce 也是对整个 tensor 做一次
+
+Attention 层（唯一分叉的地方）：
+  prefill token：FlashAttention extend kernel（token 间互相 attend，causal mask）
+  decode token：Paged attention decode kernel（单 Q 读 KV cache）
+  → SGLang 用 FlashInfer 分别处理，结果拼回 (total_tokens, hidden_dim) 继续走
+
+EP All-to-All：
+  router 对所有 token 各自独立算 top-k → 一次 dispatch → 一次 combine
+  prefill 和 decode token 混在同一次 All-to-All 里
+```
+
+### Prefill vs Decode Attention 的 kernel 差异
+
+| | Prefill | Decode |
+|--|---------|--------|
+| Q 规模 | N_q 个 token（可能几千） | 每请求 1 个 token |
+| 瓶颈 | Compute-bound（Q 间互相 attend，O(N²)） | Bandwidth-bound（读 KV cache）|
+| Tiling | block_m（Q 维度）+ block_n（KV 维度） | 无 block_m（Q=1），split-k 切 KV 维度 |
+| 并行来源 | Q blocks 间并行，SM 自然打满 | split-k 把 KV 序列切块交给多 SM 并行 |
+
+**FlashAttention（Prefill）：**
+```
+for q_block in (0, N_q, block_m):        # 外层：Q 维度 tile
+    for kv_block in (0, N_kv, block_n):  # 内层：KV 维度 tile
+        partial = Q_block @ K_block^T
+        online softmax update(m, l, acc)  # 不写 HBM，SRAM 内累加
+    output[q_block] = acc / l
+```
+
+**FlashDecoding（Decode，split-k）：**
+```
+# 多个 thread block 并行，各自负责 KV 序列的一段：
+block_i 处理 KV[i*C : (i+1)*C]：
+    partial_out_i, m_i, l_i = softmax(Q @ K_chunk^T) @ V_chunk
+
+# 归约（log-sum-exp 合并，满足结合律，可树形归约 O(log C)）：
+merge(A, B):
+    m_new = max(m_A, m_B)
+    alpha_A = exp(m_A - m_new);  alpha_B = exp(m_B - m_new)
+    l_new   = alpha_A * l_A + alpha_B * l_B
+    out_new = (alpha_A * l_A * out_A + alpha_B * l_B * out_B) / l_new
+```
+
+merge 操作满足结合律，可以两两迭代 m_i / l_i / acc，与 FlashAttention 内层的 online softmax update 是同一个操作。
+
+---
+
 ## 并行策略总结对比
 
 | 并行类型 | 分片对象 | 通信类型 | 适用场景 |
