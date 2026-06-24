@@ -1,0 +1,4084 @@
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/deepseek-v3.2.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-132 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,132]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/nemotron-3-nano-30b-a3b-bf16.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-128 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,128]}]}]}
+study-notes/一道大模型部署面试题的完整拆解.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-740 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,740]}]}]}
+study-notes/contribution-scan/CONTRIBUTION_TARGETS.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-60 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,60]}]}]}
+study-notes/agents/skills/ci-workflow-guide/SKILL.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-404 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,404]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/glm-4.5.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-122 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,122]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/references/framework-reference.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-113 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,113]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/references/result-schema.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-161 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,161]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/minimax-m2.5.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-133 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,133]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/deepseek-v3.1.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-132 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,132]}]}]}
+study-notes/agents/skills/write-sglang-test/SKILL.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-447 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,447]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/glyph.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-126 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,126]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/references/container-runbook.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-321 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,321]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/mistral-small-4-119b-2603.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-124 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,124]}]}]}
+study-notes/history/.env_20260527110558
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-2 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,2]}]}]}
+study-notes/scripts/bench_load_back_event_overhead.py
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-154 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,154]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/gpt-oss-120b.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-132 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,132]}]}]}
+study-notes/agents/skills/llm-torch-profiler-analysis/scripts/triage_overlap_helpers.py
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-1747 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,1747]}]}]}
+study-notes/agents/skills/llm-torch-profiler-analysis/references/heuristics.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-119 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,119]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/qwen35-397b-a17b-fp8.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-132 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,132]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/ernie-4.5-21b-a3b-pt.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-117 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,117]}]}]}
+study-notes/agents/skills/sglang-prod-incident-triage/references/case-studies.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-81 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,81]}]}]}
+study-notes/glm5-deploy-guide/03-deepgemm.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-71 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,71]}]}]}
+study-notes/agents/skills/large-class-init-style/SKILL.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-32 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,32]}]}]}
+study-notes/history/.env_20260616194245
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-2 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,2]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/glm-4.7.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-130 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,130]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/glm-4.6.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-135 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,135]}]}]}
+study-notes/agents/skills/speculative-naming/SKILL.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-113 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,113]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/step-3.5-flash.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-133 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,133]}]}]}
+study-notes/contribution-scan/FIRST_PR_DRAFT.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-117 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,117]}]}]}
+study-notes/agents/skills/llm-torch-profiler-analysis/references/fuse-overlap-catalog.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-367 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,367]}]}]}
+study-notes/glm5-deploy-guide/README.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-78 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,78]}]}]}
+study-notes/study/sglang-deep-dive/02-kvcache-roadmap-qa.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-773 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,773]}]}]}
+study-notes/agents/skills/sglang-prod-incident-triage/scripts/incident_artifact_tool.py
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-735 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,735]}]}]}
+study-notes/contribution-scan/analysis/triage_dense_batch64.txt
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-29 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,29]}]}]}
+study-notes/agents/skills/llm-torch-profiler-analysis/scripts/run_sglang_torch_profile_host.sh
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-241 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,241]}]}]}
+study-notes/contribution-scan/analysis/host_side_serving.txt
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-33 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,33]}]}]}
+study-notes/glm5-deploy-guide/06-dsa-indexer.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-118 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,118]}]}]}
+study-notes/agents/skills/clean-startup-log/SKILL.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-282 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,282]}]}]}
+study-notes/profiling-study/03-实验数据与分析.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-80 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,80]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/qwen3-coder-next.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-124 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,124]}]}]}
+study-notes/history/.env_20260616194241
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-2 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,2]}]}]}
+study-notes/study/sglang-deep-dive/roadmap-qa.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-834 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,834]}]}]}
+study-notes/agents/skills/llm-torch-profiler-analysis/scripts/render_triage_markdown_bundle.py
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-259 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,259]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/SKILL.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-527 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,527]}]}]}
+study-notes/agents/skills/sglang-prod-incident-triage/references/replay-trace-profile.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-236 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,236]}]}]}
+study-notes/agents/skills/add-sgl-kernel/SKILL.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-367 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,367]}]}]}
+study-notes/contribution-scan/analysis/triage_dense_batch1.txt
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-34 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,34]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/devstral-small-2-24b-instruct-2512.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-123 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,123]}]}]}
+study-notes/agents/skills/llm-torch-profiler-analysis/scripts/make_trtllm_py_executor_override.py
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-132 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,132]}]}]}
+study-notes/profiling-study/06-qwen3.6-35b-a3b-fp8-单卡serving实录.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-472 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,472]}]}]}
+study-notes/agents/skills/sglang-sota-performance/SKILL.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-254 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,254]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/deepseek-math-v2.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-130 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,130]}]}]}
+study-notes/history/.env_20260617082913
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-2 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,2]}]}]}
+study-notes/agents/skills/llm-torch-profiler-analysis/scripts/analyze_sglang_torch_profile.py
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-16 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,16]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/qwen3-next-80b-a3b-instruct.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-130 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,130]}]}]}
+study-notes/contribution-scan/analysis/triage_nograph_batch1.txt
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-31 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,31]}]}]}
+study-notes/glm5-deploy-guide/02-deepep.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-86 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,86]}]}]}
+study-notes/codegraph/.gitignore
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-16 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,16]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/glm-5-fp8.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-132 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,132]}]}]}
+study-notes/agents/skills/llm-torch-profiler-analysis/scripts/triage_kernel_helpers.py
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-2648 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,2648]}]}]}
+study-notes/codegraph/contribution_targets/CONTRIBUTION_TARGETS.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-106 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,106]}]}]}
+study-notes/codegraph/contribution_targets/FIRST_PR_DRAFT.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-112 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,112]}]}]}
+study-notes/study/load-back-metric-fix.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-768 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,768]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/llama-3.1-70b-instruct.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-124 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,124]}]}]}
+study-notes/agents/skills/llm-torch-profiler-analysis/references/overlap-catalog.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-180 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,180]}]}]}
+study-notes/glm5-deploy-guide/05-mtp-and-speculative.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-93 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,93]}]}]}
+study-notes/study/load_back_explanation.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-471 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,471]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/ling-2.5-1t.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-134 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,134]}]}]}
+study-notes/contribution-scan/analysis/qwen36_serving_triage.txt
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-71 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,71]}]}]}
+study-notes/agents/skills/llm-torch-profiler-analysis/scripts/analyze_llm_torch_profile.py
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-858 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,858]}]}]}
+study-notes/agents/skills/mechanical-refactor-verify/SKILL.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-134 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,134]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/scripts/compare_benchmark_results.py
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-308 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,308]}]}]}
+study-notes/agents/skills/sglang-prod-incident-triage/references/endpoints-and-signals.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-218 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,218]}]}]}
+study-notes/agents/skills/sglang-prod-incident-triage/references/decision-tree.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-197 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,197]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/llada2-1-mini.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-130 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,130]}]}]}
+study-notes/agents/skills/mechanical-refactor-verify/mechanical_refactor_verify_utils.py
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-80 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,80]}]}]}
+study-notes/contribution-scan/analysis/triage_serving_scheduler.txt
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-48 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,48]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/qwen3-235b-a22b.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-132 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,132]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/qwen3-coder-480b-a35b-instruct.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-131 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,131]}]}]}
+study-notes/profiling-study/01-环境搭建.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-87 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,87]}]}]}
+study-notes/agents/skills/llm-torch-profiler-analysis/scripts/run_trtllm_pytorch_profile_host.sh
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-407 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,407]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/minimax-m2.1.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-121 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,121]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/mimo-v2-flash.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-133 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,133]}]}]}
+study-notes/glm5-deploy-guide/04-memory-and-scheduling.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-117 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,117]}]}]}
+study-notes/profiling-study/05-serving路径分析.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-107 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,107]}]}]}
+study-notes/agents/skills/add-jit-kernel/SKILL.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-630 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,630]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/glm-4.7-flash.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-126 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,126]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/kimi-k2-instruct.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-133 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,133]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/kimi-k2.5.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-127 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,127]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/kimi-linear-48b-a3b-instruct.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-121 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,121]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/references/example-plan.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-133 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,133]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/ministral-3-8b-instruct-2512.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-121 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,121]}]}]}
+study-notes/agents/skills/sglang-prod-incident-triage/scripts/replay_trusted_request_dump.py
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-219 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,219]}]}]}
+study-notes/profiling-study/README.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-40 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,40]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/llama-3.3-70b-instruct.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-118 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,118]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/ring-2.5-1t.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-124 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,124]}]}]}
+study-notes/history/.env_20260617082852
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-2 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,2]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/nemotron-3-super-120b-a12b-bf16.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-128 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,128]}]}]}
+study-notes/scripts/profile_decode_bottlenecks.sh
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-101 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,101]}]}]}
+study-notes/agents/skills/debug-cuda-crash/SKILL.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-657 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,657]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/llama-4-scout-17b-16e-instruct.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-129 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,129]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/README.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-17 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,17]}]}]}
+study-notes/agents/skills/llm-torch-profiler-analysis/scripts/run_llm_single_model_matrix_host.sh
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-274 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,274]}]}]}
+study-notes/agents/skills/llm-torch-profiler-analysis/references/source-map.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-42 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,42]}]}]}
+study-notes/agents/skills/llm-torch-profiler-analysis/scripts/probe_llm_server.py
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-230 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,230]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/intern-s1.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-135 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,135]}]}]}
+study-notes/agents/skills/llm-torch-profiler-analysis/scripts/profile_common.py
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-1145 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,1145]}]}]}
+study-notes/agents/skills/llm-torch-profiler-analysis/scripts/run_vllm_torch_profile_host.sh
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-343 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,343]}]}]}
+study-notes/contribution-scan/DROP_LIST.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-21 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,21]}]}]}
+study-notes/profiling-study/02-profiling方法论.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-88 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,88]}]}]}
+study-notes/profiling-study/04-结论与下一步.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-56 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,56]}]}]}
+study-notes/profiling-study/00-导读-深入浅出.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-424 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,424]}]}]}
+study-notes/scripts/profile_serving_scheduler.sh
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-63 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,63]}]}]}
+study-notes/agents/skills/sglang-prod-incident-triage/SKILL.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-291 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,291]}]}]}
+study-notes/agents/skills/llm-torch-profiler-analysis/SKILL.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-453 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,453]}]}]}
+study-notes/agents/skills/sglang-cherrypick/SKILL.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-331 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,331]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/deepseek-v3.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-133 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,133]}]}]}
+study-notes/scripts/run_remote_test.py
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-37 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,37]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/deepseek-r1-0528.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-133 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,133]}]}]}
+study-notes/agents/skills/generate-profile/SKILL.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-143 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,143]}]}]}
+study-notes/agents/skills/debug-distributed-hang/SKILL.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-248 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,248]}]}]}
+study-notes/agents/skills/sglang-bisect-ci-regression/SKILL.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-224 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,224]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/llama-4-maverick-17b-128e-instruct-fp8.yaml
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-122 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,122]}]}]}
+study-notes/agents/skills/llm-serving-auto-benchmark/scripts/validate_cookbook_configs.py
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-434 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,434]}]}]}
+study-notes/study/sglang-deep-dive/01-radix-cache.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-328 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,328]}]}]}
+study-notes/glm5-deploy-guide/07-pd-and-router.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-144 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,144]}]}]}
+study-notes/glm5-deploy-guide/01-parallelism.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-333 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,333]}]}]}
+study-notes/agents/skills/llm-torch-profiler-analysis/references/vllm-torch-compile-fusions.md
+  s_89f7910d5b9b64::t_4bcf8e4c91ed35 1-66 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a3b75d1ab28db9069e6308d","tool_type":"agent","tool_id":"RunCommand","line_ranges":[{"Range":[1,66]}]}]}
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "42ca53a3a42e53b5413b156ea91b2e5b84c0a61c",
+  "prompts": {},
+  "sessions": {
+    "s_89f7910d5b9b64": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a3b7545ab28db9069e63054",
+        "model": "DeepSeek-V4-Pro__dev",
+        "display_model_name": "DeepSeek-V4-Pro"
+      },
+      "human_author": "vuuihc <vuuihc@users.noreply.github.com>"
+    }
+  },
+  "attestation_metadata": {
+    "study-notes/agents/skills/add-jit-kernel/SKILL.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              630
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  630
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/add-sgl-kernel/SKILL.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              367
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  367
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/ci-workflow-guide/SKILL.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              404
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  404
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/clean-startup-log/SKILL.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              282
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  282
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/debug-cuda-crash/SKILL.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              657
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  657
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/debug-distributed-hang/SKILL.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              248
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  248
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/generate-profile/SKILL.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              143
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  143
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/large-class-init-style/SKILL.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              32
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  32
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/SKILL.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              527
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  527
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/README.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              17
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  17
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/deepseek-math-v2.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              130
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  130
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/deepseek-r1-0528.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              133
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  133
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/deepseek-v3.1.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              132
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  132
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/deepseek-v3.2.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              132
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  132
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/deepseek-v3.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              133
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  133
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/devstral-small-2-24b-instruct-2512.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              123
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  123
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/ernie-4.5-21b-a3b-pt.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              117
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  117
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/glm-4.5.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              122
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  122
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/glm-4.6.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              135
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  135
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/glm-4.7-flash.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              126
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  126
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/glm-4.7.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              130
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  130
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/glm-5-fp8.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              132
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  132
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/glyph.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              126
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  126
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/gpt-oss-120b.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              132
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  132
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/intern-s1.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              135
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  135
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/kimi-k2-instruct.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              133
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  133
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/kimi-k2.5.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              127
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  127
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/kimi-linear-48b-a3b-instruct.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              121
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  121
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/ling-2.5-1t.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              134
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  134
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/llada2-1-mini.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              130
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  130
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/llama-3.1-70b-instruct.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              124
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  124
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/llama-3.3-70b-instruct.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              118
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  118
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/llama-4-maverick-17b-128e-instruct-fp8.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              122
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  122
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/llama-4-scout-17b-16e-instruct.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              129
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  129
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/mimo-v2-flash.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              133
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  133
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/minimax-m2.1.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              121
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  121
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/minimax-m2.5.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              133
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  133
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/ministral-3-8b-instruct-2512.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              121
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  121
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/mistral-small-4-119b-2603.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              124
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  124
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/nemotron-3-nano-30b-a3b-bf16.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              128
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  128
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/nemotron-3-super-120b-a12b-bf16.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              128
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  128
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/qwen3-235b-a22b.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              132
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  132
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/qwen3-coder-480b-a35b-instruct.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              131
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  131
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/qwen3-coder-next.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              124
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  124
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/qwen3-next-80b-a3b-instruct.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              130
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  130
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/qwen35-397b-a17b-fp8.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              132
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  132
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/ring-2.5-1t.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              124
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  124
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/configs/cookbook-llm/step-3.5-flash.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              133
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  133
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/references/container-runbook.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              321
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  321
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/references/example-plan.yaml": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              133
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  133
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/references/framework-reference.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              113
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  113
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/references/result-schema.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              161
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  161
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/scripts/compare_benchmark_results.py": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              308
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  308
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-serving-auto-benchmark/scripts/validate_cookbook_configs.py": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              434
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  434
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-torch-profiler-analysis/SKILL.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              453
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  453
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-torch-profiler-analysis/references/fuse-overlap-catalog.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              367
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  367
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-torch-profiler-analysis/references/heuristics.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              119
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  119
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-torch-profiler-analysis/references/overlap-catalog.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              180
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  180
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-torch-profiler-analysis/references/source-map.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              42
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  42
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-torch-profiler-analysis/references/vllm-torch-compile-fusions.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              66
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  66
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-torch-profiler-analysis/scripts/analyze_llm_torch_profile.py": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              858
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  858
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-torch-profiler-analysis/scripts/analyze_sglang_torch_profile.py": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              16
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  16
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-torch-profiler-analysis/scripts/make_trtllm_py_executor_override.py": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              132
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  132
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-torch-profiler-analysis/scripts/probe_llm_server.py": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              230
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  230
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-torch-profiler-analysis/scripts/profile_common.py": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              1145
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  1145
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-torch-profiler-analysis/scripts/render_triage_markdown_bundle.py": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              259
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  259
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-torch-profiler-analysis/scripts/run_llm_single_model_matrix_host.sh": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              274
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  274
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-torch-profiler-analysis/scripts/run_sglang_torch_profile_host.sh": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              241
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  241
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-torch-profiler-analysis/scripts/run_trtllm_pytorch_profile_host.sh": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              407
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  407
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-torch-profiler-analysis/scripts/run_vllm_torch_profile_host.sh": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              343
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  343
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-torch-profiler-analysis/scripts/triage_kernel_helpers.py": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              2648
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  2648
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/llm-torch-profiler-analysis/scripts/triage_overlap_helpers.py": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              1747
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  1747
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/mechanical-refactor-verify/SKILL.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              134
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  134
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/mechanical-refactor-verify/mechanical_refactor_verify_utils.py": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              80
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  80
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/sglang-bisect-ci-regression/SKILL.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              224
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  224
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/sglang-cherrypick/SKILL.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              331
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  331
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/sglang-prod-incident-triage/SKILL.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              291
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  291
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/sglang-prod-incident-triage/references/case-studies.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              81
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  81
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/sglang-prod-incident-triage/references/decision-tree.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              197
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  197
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/sglang-prod-incident-triage/references/endpoints-and-signals.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              218
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  218
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/sglang-prod-incident-triage/references/replay-trace-profile.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              236
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  236
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/sglang-prod-incident-triage/scripts/incident_artifact_tool.py": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              735
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  735
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/sglang-prod-incident-triage/scripts/replay_trusted_request_dump.py": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              219
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  219
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/sglang-sota-performance/SKILL.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              254
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  254
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/speculative-naming/SKILL.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              113
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  113
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/agents/skills/write-sglang-test/SKILL.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              447
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  447
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/codegraph/.gitignore": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              16
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  16
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/codegraph/contribution_targets/CONTRIBUTION_TARGETS.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              106
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  106
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/codegraph/contribution_targets/FIRST_PR_DRAFT.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              112
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  112
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/contribution-scan/CONTRIBUTION_TARGETS.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              60
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  60
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/contribution-scan/DROP_LIST.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              21
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  21
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/contribution-scan/FIRST_PR_DRAFT.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              117
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  117
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/contribution-scan/analysis/host_side_serving.txt": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              33
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  33
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/contribution-scan/analysis/qwen36_serving_triage.txt": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              71
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  71
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/contribution-scan/analysis/triage_dense_batch1.txt": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              34
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  34
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/contribution-scan/analysis/triage_dense_batch64.txt": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              29
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  29
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/contribution-scan/analysis/triage_nograph_batch1.txt": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              31
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  31
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/contribution-scan/analysis/triage_serving_scheduler.txt": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              48
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  48
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/glm5-deploy-guide/01-parallelism.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              333
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  333
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/glm5-deploy-guide/02-deepep.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              86
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  86
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/glm5-deploy-guide/03-deepgemm.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              71
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  71
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/glm5-deploy-guide/04-memory-and-scheduling.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              117
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  117
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/glm5-deploy-guide/05-mtp-and-speculative.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              93
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  93
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/glm5-deploy-guide/06-dsa-indexer.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              118
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  118
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/glm5-deploy-guide/07-pd-and-router.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              144
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  144
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/glm5-deploy-guide/README.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              78
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  78
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/history/.env_20260527110558": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              2
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  2
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/history/.env_20260616194241": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              2
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  2
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/history/.env_20260616194245": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              2
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  2
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/history/.env_20260617082852": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              2
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  2
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/history/.env_20260617082913": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              2
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  2
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/profiling-study/00-导读-深入浅出.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              424
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  424
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/profiling-study/01-环境搭建.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              87
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  87
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/profiling-study/02-profiling方法论.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              88
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  88
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/profiling-study/03-实验数据与分析.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              80
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  80
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/profiling-study/04-结论与下一步.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              56
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  56
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/profiling-study/05-serving路径分析.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              107
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  107
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/profiling-study/06-qwen3.6-35b-a3b-fp8-单卡serving实录.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              472
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  472
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/profiling-study/README.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              40
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  40
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/scripts/bench_load_back_event_overhead.py": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              154
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  154
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/scripts/profile_decode_bottlenecks.sh": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              101
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  101
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/scripts/profile_serving_scheduler.sh": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              63
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  63
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/scripts/run_remote_test.py": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              37
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  37
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/study/load-back-metric-fix.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              768
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  768
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/study/load_back_explanation.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              471
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  471
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/study/sglang-deep-dive/01-radix-cache.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              328
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  328
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/study/sglang-deep-dive/02-kvcache-roadmap-qa.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              773
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  773
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/study/sglang-deep-dive/roadmap-qa.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              834
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  834
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "study-notes/一道大模型部署面试题的完整拆解.md": [
+      {
+        "hash": "s_89f7910d5b9b64::t_4bcf8e4c91ed35",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              740
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a3b75d1ab28db9069e6308d",
+            "tool_type": "agent",
+            "tool_id": "RunCommand",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  740
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "remote_transcripts": {
+    "s_498efaea9e935e": {
+      "tool": "trae",
+      "conversation_id": "6a3a6c8fab28db9069e62e3a",
+      "session_id": "6a3a6c8fab28db9069e62e3a",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_498efaea9e935e::t_057377add94d4a": {
+      "tool": "trae",
+      "conversation_id": "6a3a6c8fab28db9069e62e3a",
+      "session_id": "6a3a6c8fab28db9069e62e3a",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_498efaea9e935e::t_0f7dd4f13d5aa6": {
+      "tool": "trae",
+      "conversation_id": "6a3a6c8fab28db9069e62e3a",
+      "session_id": "6a3a6c8fab28db9069e62e3a",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_498efaea9e935e::t_55a900c55d30fa": {
+      "tool": "trae",
+      "conversation_id": "6a3a6c8fab28db9069e62e3a",
+      "session_id": "6a3a6c8fab28db9069e62e3a",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_498efaea9e935e::t_5a4c790dfe3b12": {
+      "tool": "trae",
+      "conversation_id": "6a3a6c8fab28db9069e62e3a",
+      "session_id": "6a3a6c8fab28db9069e62e3a",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_498efaea9e935e::t_85856c95af85ed": {
+      "tool": "trae",
+      "conversation_id": "6a3a6c8fab28db9069e62e3a",
+      "session_id": "6a3a6c8fab28db9069e62e3a",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_89f7910d5b9b64": {
+      "tool": "trae",
+      "conversation_id": "6a3b7545ab28db9069e63054",
+      "session_id": "6a3b7545ab28db9069e63054",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_89f7910d5b9b64::t_4bcf8e4c91ed35": {
+      "tool": "trae",
+      "conversation_id": "6a3b7545ab28db9069e63054",
+      "session_id": "6a3b7545ab28db9069e63054",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_89f7910d5b9b64::t_dad7bda32746c5": {
+      "tool": "trae",
+      "conversation_id": "6a3b7545ab28db9069e63054",
+      "session_id": "6a3b7545ab28db9069e63054",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    }
+  }
+}
