@@ -1,0 +1,48 @@
+Triage View
+Mode: single-trace
+Framework: SGLang
+Input traces: /Users/bytedance/works/sglang/.contribution-scan/traces/serving_scheduler_TP0.trace.json.gz
+
+Kernel Table
+##### decode
+| Kernel | Category | GPU time | Share | Launches | Python location (site share) | CPU op |
+| --- | --- | ---: | ---: | ---: | --- | --- |
+| nvjet_sm90_tst_64x32_64x16_2x1_v_bz_TNT | gemm | 40.39 ms | 20.6% | 1080 | python/sglang/srt/model_executor/model_runner.py:3502 _forward_raw | cudaGraphLaunch |
+| nvjet_sm90_tst_320xADDR_64x3_1x2_h_bz_coopB_TNT | gemm | 28.88 ms | 14.7% | 26 | python/sglang/srt/layers/quantization/unquant.py:153 apply | aten::mm |
+| void cutlass::device_kernel<flash::enable_sm90_or_later<flash::FlashAttnFwdSm90<flash::CollectiveMainloopFwdSm90<2, cute::tuple<cute::C<1>, cute::C<1>, cute::C<1> >, cute::tuple<cute::C<64>, cute::C<128>, cute::C<128> >, 128, cutlass::bfloat16_t, float, cutlass::arch::Sm90, true, false, false, true, true, false, false, true, true, true, true, false, cutlass::bfloat16_t, 1>, flash::CollectiveEpilogueFwd<cute::tuple<cute::C<64>, cute::C<128>, cute::C<128> >, cute::tuple<cute::C<1>, cute::C<1>, cute::C<1> >, cutlass::bfloat16_t, cutlass::arch::Sm90, 128, true, true, true, false>, flash::VarlenDynamicPersistentTileScheduler<64, 128, 128, 128, true, true, true, true, true, true> > > > | gemm | 20.42 ms | 10.4% | 540 | python/sglang/srt/model_executor/model_runner.py:3502 _forward_raw | cudaGraphLaunch |
+| nvjet_sm90_tst_384x104_64x3_1x1_h_bz_coopA_TNT | gemm | 19.42 ms | 9.9% | 53 | python/sglang/srt/layers/quantization/unquant.py:153 apply | aten::mm |
+| nvjet_sm90_tst_384x32_64x4_1x1_h_bz_splitK_TNT | gemm | 19.13 ms | 9.8% | 540 | python/sglang/srt/model_executor/model_runner.py:3502 _forward_raw | cudaGraphLaunch |
+| nvjet_sm90_tst_512x72_64x2_2x1_v_bz_coopA_TNT | gemm | 12.22 ms | 6.2% | 36 | python/sglang/srt/layers/quantization/unquant.py:153 apply | aten::mm |
+| nvjet_sm90_tst_256x32_64x5_2x1_v_bz_splitK_TNT | gemm | 11.18 ms | 5.7% | 540 | python/sglang/srt/model_executor/model_runner.py:3502 _forward_raw | cudaGraphLaunch |
+| nvjet_sm90_tst_128x240_64x4_2x1_v_bz_coopA_TNT | gemm | 7.28 ms | 3.7% | 26 | python/sglang/srt/layers/quantization/unquant.py:153 apply | aten::mm |
+| nvjet_sm90_tst_512x72_64x2_2x1_v_bz_coopA_splitK_TNT | gemm | 6.20 ms | 3.2% | 36 | python/sglang/srt/layers/quantization/unquant.py:153 apply | aten::mm |
+| nvjet_sm90_tst_512x32_64x3_2x1_v_bz_TNT | gemm | 5.56 ms | 2.8% | 15 | python/sglang/srt/model_executor/model_runner.py:3502 _forward_raw | cudaGraphLaunch |
+| kernel_cutlass_kernel_flashinfernormkernelsfused_add_rmsnormFusedAddRMSNormKernel_object_at__tensorptrbf16gmemalign128o409640961_tensorptrbf16gmemalign128o409640961_tensorptrbf16gmemalign_0 | gemm | 4.14 ms | 2.1% | 1205 | python/sglang/srt/model_executor/model_runner.py:3502 _forward_raw (site share 84%)<br>python/sglang/srt/layers/layernorm.py:248 forward_cuda (site share 16%) | cudaGraphLaunch<br>cudaLaunchKernelExC |
+| void cublasLt::splitKreduce_kernel<32, 16, int, float, __nv_bfloat16, float, __nv_bfloat16, false, float, __nv_bfloat16, __nv_bfloat16, true, false, false, false> | gemm | 3.49 ms | 1.8% | 1116 | python/sglang/srt/model_executor/model_runner.py:3502 _forward_raw (site share 93%)<br>python/sglang/srt/layers/quantization/unquant.py:153 apply (site share 7%) | cudaGraphLaunch<br>aten::mm |
+| nvjet_sm90_tst_256x72_64x5_2x1_v_bz_TNT | gemm | 3.15 ms | 1.6% | 36 | python/sglang/srt/layers/quantization/unquant.py:153 apply | aten::mm |
+| nvjet_sm90_tst_192x72_64x6_2x1_v_bz_TNT | gemm | 2.38 ms | 1.2% | 36 | python/sglang/srt/layers/quantization/unquant.py:153 apply | aten::mm |
+
+##### all
+| Kernel | Category | GPU time | Share | Launches | Python location (site share) | CPU op |
+| --- | --- | ---: | ---: | ---: | --- | --- |
+| nvjet_sm90_tst_192x192_64x4_2x1_v_bz_coopB_TNN | gemm | 531.85 ms | 60.0% | 72 | python/sglang/srt/layers/quantization/unquant.py:153 apply | aten::mm |
+| nvjet_sm90_tst_320xADDR_64x3_1x2_h_bz_coopB_TNT | gemm | 304.20 ms | 34.3% | 82 | python/sglang/srt/layers/quantization/unquant.py:153 apply | aten::mm |
+| void cutlass::device_kernel<flash::enable_sm90_or_later<flash::FlashAttnFwdSm90<flash::CollectiveMainloopFwdSm90<2, cute::tuple<cute::C<1>, cute::C<1>, cute::C<1> >, cute::tuple<cute::C<128>, cute::C<128>, cute::C<128> >, 128, cutlass::bfloat16_t, float, cutlass::arch::Sm90, true, false, false, true, true, false, false, true, true, true, false, false, cutlass::bfloat16_t, 1>, flash::CollectiveEpilogueFwd<cute::tuple<cute::C<128>, cute::C<128>, cute::C<128> >, cute::tuple<cute::C<1>, cute::C<1>, cute::C<1> >, cutlass::bfloat16_t, cutlass::arch::Sm90, 256, true, true, false, false>, flash::VarlenDynamicPersistentTileScheduler<128, 128, 256, 128, false, true, true, true, true, true> > > > | gemm | 12.54 ms | 1.4% | 46 | python/sglang/jit_kernel/flash_attention_v3.py:19 _call_fa3_kernel | sgl_kernel::fwd |
+
+Overlap Opportunity Table
+| Priority | Verdict | Kernel | Python scope | Formal signal | Dep risk | Recommendation |
+| --- | --- | --- | --- | --- | --- | --- |
+| - | - | No rows cleared the 1.0% reporting bar. Use mapping/formal mode for overlap attribution. | - | - | - | - |
+
+Fuse Opportunity Table
+##### decode
+| Pattern | Confidence | Related GPU time | Share | Evidence kernels | Current kernel Python location | Candidate fused Python path | Rationale |
+| --- | --- | ---: | ---: | --- | --- | --- | --- |
+| PR #22392 CUTLASS FP8 scaled MM replacing nvjet | Confirmed | 157.02 ms | 80.1% | nvjet_sm90_tst_64x32_64x16_2x1_v_bz_TNT (20.6%)<br>nvjet_sm90_tst_320xADDR_64x3_1x2_h_bz_coopB_TNT (14.7%)<br>nvjet_sm90_tst_384x104_64x3_1x1_h_bz_coopA_TNT (9.9%) | _forward_raw @ python/sglang/srt/model_executor/model_runner.py:3502<br>apply @ python/sglang/srt/layers/quantization/unquant.py:153<br>_compute_lm_head @ python/sglang/srt/layers/logits_processor.py:877<br>forward @ python/sglang/srt/layers/sampler.py:91 | PR #22392<br>sgl-kernel/python/sgl_kernel/gemm.py<br>python/sglang/srt/layers/quantization/fp8_utils.py | Matches an open upstream path (80.1% related GPU time). Open SGLang PR replaces nvjet FP8 GEMM with CUTLASS to remove memset bubbles and extra copies. |
+| Fused QK RoPE reshape + KV cache write | Candidate | 2.20 ms | 1.1% | - | _forward_raw @ python/sglang/srt/model_executor/model_runner.py:3502<br>apply_rope_with_cos_sin_cache_inplace @ python/sglang/jit_kernel/rope.py:179<br>_set_kv_buffer_impl @ python/sglang/srt/mem_cache/memory_pool.py:97 | python/sglang/srt/layers/attention/utils.py | Split kernels in this family take 1.1% of GPU time. This tree already has a matching path. Attention prep already has a fused RoPE plus reshape plus cache write path. |
+| Fused residual add + RMSNorm | Confirmed | 4.14 ms | 2.1% | kernel_cutlass_kernel_flashinfernormkernelsfused_add_rmsnormFusedAddRMSNormKernel_object_at__tensorptrbf16gmemalign128o409640961_tensorptrbf16gmemalign128o409640961_tensorptrbf16gmemalign_0 (2.1%) | _forward_raw @ python/sglang/srt/model_executor/model_runner.py:3502<br>forward_cuda @ python/sglang/srt/layers/layernorm.py:248 | python/sglang/srt/layers/layernorm.py<br>python/sglang/srt/layers/quantization/modelslim/modelslim.py | `Fused residual add + RMSNorm` is present in this trace (2.1% related GPU time). Residual add plus RMSNorm already has fused implementations across several backends. |
+
+##### all
+| Pattern | Confidence | Related GPU time | Share | Evidence kernels | Current kernel Python location | Candidate fused Python path | Rationale |
+| --- | --- | ---: | ---: | --- | --- | --- | --- |
+| PR #22392 CUTLASS FP8 scaled MM replacing nvjet | Confirmed | 850.67 ms | 96.0% | nvjet_sm90_tst_192x192_64x4_2x1_v_bz_coopB_TNN (60.0%)<br>nvjet_sm90_tst_320xADDR_64x3_1x2_h_bz_coopB_TNT (34.3%) | apply @ python/sglang/srt/layers/quantization/unquant.py:153<br>_compute_lm_head @ python/sglang/srt/layers/logits_processor.py:877<br>forward @ python/sglang/srt/layers/sampler.py:91 | PR #22392<br>sgl-kernel/python/sgl_kernel/gemm.py<br>python/sglang/srt/layers/quantization/fp8_utils.py | Matches an open upstream path (96.0% related GPU time). Open SGLang PR replaces nvjet FP8 GEMM with CUTLASS to remove memset bubbles and extra copies. |

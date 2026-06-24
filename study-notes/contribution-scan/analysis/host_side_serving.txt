@@ -1,0 +1,33 @@
+GPU busy 1081.3ms / wall 1250.7ms = 86% util (20 scheduler steps)
+
+=== scheduler call tree (inclusive) ===
+   1265.6ms x1    sglang/srt/managers/scheduler.py(4062): run_scheduler_process
+   1265.6ms x1    sglang/srt/managers/scheduler.py(1418): run_event_loop
+   1265.6ms x1    sglang/srt/managers/scheduler.py(3927): dispatch_event_loop
+   1265.6ms x1    sglang/srt/managers/scheduler.py(1462): event_loop_overlap
+    948.5ms x74   sglang/srt/managers/scheduler.py(2415): get_next_batch_to_run
+    940.9ms x74   sglang/srt/managers/scheduler.py(2547): get_new_batch_prefill
+    940.8ms x74   sglang/srt/managers/scheduler.py(2567): _get_new_batch_prefill_raw
+    936.2ms x4    sglang/srt/managers/schedule_batch.py(1896): prepare_for_extend
+    932.9ms x4    sglang/srt/mem_cache/common.py(343): alloc_for_extend
+    932.2ms x4    sglang/srt/mem_cache/common.py(64): write_cache_indices
+    179.0ms x20   sglang/srt/managers/scheduler.py(2985): run_batch
+    119.7ms x18   sglang/srt/managers/scheduler.py(1454): pop_and_process
+
+=== top host cpu_op ===
+    834.6ms x388   aten::copy_
+    832.6ms x232   aten::to
+    832.4ms x142   aten::_to_copy
+     30.0ms x576   aten::linear
+     25.9ms x580   aten::matmul
+     25.0ms x580   aten::mm
+      6.9ms x144   sgl_kernel::fwd
+      4.8ms x171   aten::clone
+      4.4ms x144   sglang::_run_activation_inplace
+      3.9ms x834   aten::empty
+      3.4ms x108   aten::contiguous
+      3.0ms x144   sglang::fused_inplace_qknorm
+
+=== host-sync smell (.item/_local_scalar_dense) — the #28397 pattern ===
+     0.11ms x49   aten::item  <- negligible
+     0.04ms x49   aten::_local_scalar_dense  <- negligible

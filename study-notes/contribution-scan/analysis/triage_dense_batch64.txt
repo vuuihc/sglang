@@ -1,0 +1,29 @@
+Triage View
+Mode: single-trace
+Framework: SGLang
+Input traces: /Users/bytedance/works/sglang/.contribution-scan/traces/dense_batch64_input512_output64_decode.trace.json.gz
+
+Kernel Table
+##### decode
+| Kernel | Category | GPU time | Share | Launches | Python location (site share) | CPU op |
+| --- | --- | ---: | ---: | ---: | --- | --- |
+| void cutlass::device_kernel<flash::enable_sm90_or_later<flash::FlashAttnFwdSm90<flash::CollectiveMainloopFwdSm90<2, cute::tuple<cute::C<1>, cute::C<1>, cute::C<1> >, cute::tuple<cute::C<64>, cute::C<128>, cute::C<128> >, 128, cutlass::bfloat16_t, float, cutlass::arch::Sm90, true, false, false, true, true, false, false, true, true, true, true, false, cutlass::bfloat16_t, 1>, flash::CollectiveEpilogueFwd<cute::tuple<cute::C<64>, cute::C<128>, cute::C<128> >, cute::tuple<cute::C<1>, cute::C<1>, cute::C<1> >, cutlass::bfloat16_t, cutlass::arch::Sm90, 128, true, true, true, false>, flash::VarlenDynamicPersistentTileScheduler<64, 128, 128, 128, true, true, true, true, true, true> > > > | gemm | 19.95 ms | 31.5% | 180 | python/sglang/srt/model_executor/model_runner.py:3502 _forward_raw | cudaGraphLaunch |
+| nvjet_sm90_tst_320xADDR_64x4_2x1_v_bz_TNT | gemm | 17.55 ms | 27.7% | 180 | python/sglang/srt/model_executor/model_runner.py:3502 _forward_raw | cudaGraphLaunch |
+| nvjet_sm90_tst_112x64_64x9_2x1_v_bz_splitK_TNN | gemm | 13.09 ms | 20.6% | 360 | python/sglang/srt/model_executor/model_runner.py:3502 _forward_raw | cudaGraphLaunch |
+| nvjet_sm90_tst_80xADDR_64x11_2x1_v_bz_TNN | gemm | 4.82 ms | 7.6% | 180 | python/sglang/srt/model_executor/model_runner.py:3502 _forward_raw | cudaGraphLaunch |
+| nvjet_sm90_tst_512x64_64x2_2x1_v_bz_coopB_TNN | gemm | 2.99 ms | 4.7% | 5 | python/sglang/srt/model_executor/model_runner.py:3502 _forward_raw | cudaGraphLaunch |
+| void cublasLt::splitKreduce_kernel<32, 16, int, float, __nv_bfloat16, float, __nv_bfloat16, false, float, __nv_bfloat16, __nv_bfloat16, true, false, false, false> | gemm | 1.34 ms | 2.1% | 360 | python/sglang/srt/model_executor/model_runner.py:3502 _forward_raw | cudaGraphLaunch |
+| kernel_cutlass_kernel_flashinfernormkernelsfused_add_rmsnormFusedAddRMSNormKernel_object_at__tensorptrbf16gmemalign128o409640961_tensorptrbf16gmemalign128o409640961_tensorptrbf16gmemalign_0 | gemm | 1.12 ms | 1.8% | 360 | python/sglang/srt/model_executor/model_runner.py:3502 _forward_raw | cudaGraphLaunch |
+
+Overlap Opportunity Table
+| Priority | Verdict | Kernel | Python scope | Formal signal | Dep risk | Recommendation |
+| --- | --- | --- | --- | --- | --- | --- |
+| - | - | No rows cleared the 1.0% reporting bar. Use mapping/formal mode for overlap attribution. | - | - | - | - |
+
+Fuse Opportunity Table
+##### decode
+| Pattern | Confidence | Related GPU time | Share | Evidence kernels | Current kernel Python location | Candidate fused Python path | Rationale |
+| --- | --- | ---: | ---: | --- | --- | --- | --- |
+| PR #22392 CUTLASS FP8 scaled MM replacing nvjet | Confirmed | 38.46 ms | 60.6% | nvjet_sm90_tst_320xADDR_64x4_2x1_v_bz_TNT (27.7%)<br>nvjet_sm90_tst_112x64_64x9_2x1_v_bz_splitK_TNN (20.6%)<br>nvjet_sm90_tst_80xADDR_64x11_2x1_v_bz_TNN (7.6%) | _forward_raw @ python/sglang/srt/model_executor/model_runner.py:3502<br>forward @ python/sglang/srt/layers/sampler.py:91 | PR #22392<br>sgl-kernel/python/sgl_kernel/gemm.py<br>python/sglang/srt/layers/quantization/fp8_utils.py | Matches an open upstream path (60.6% related GPU time). Open SGLang PR replaces nvjet FP8 GEMM with CUTLASS to remove memset bubbles and extra copies. |
+| Fused QK RoPE reshape + KV cache write | Candidate | 0.65 ms | 1.0% | - | _forward_raw @ python/sglang/srt/model_executor/model_runner.py:3502 | python/sglang/srt/layers/attention/utils.py | Split kernels in this family take 1.0% of GPU time. This tree already has a matching path. Attention prep already has a fused RoPE plus reshape plus cache write path. |
+| Fused residual add + RMSNorm | Confirmed | 1.12 ms | 1.8% | kernel_cutlass_kernel_flashinfernormkernelsfused_add_rmsnormFusedAddRMSNormKernel_object_at__tensorptrbf16gmemalign128o409640961_tensorptrbf16gmemalign128o409640961_tensorptrbf16gmemalign_0 (1.8%) | _forward_raw @ python/sglang/srt/model_executor/model_runner.py:3502 | python/sglang/srt/layers/layernorm.py<br>python/sglang/srt/layers/quantization/modelslim/modelslim.py | `Fused residual add + RMSNorm` is present in this trace (1.8% related GPU time). Residual add plus RMSNorm already has fused implementations across several backends. |
