@@ -1,0 +1,23 @@
+python/sglang/srt/mem_cache/hiradix_cache.py
+  s_3e4977bdcf79d3::t_331149ddb1835d 622-625
+python/sglang/srt/mem_cache/unified_radix_cache.py
+  s_3e4977bdcf79d3::t_e65bab86db645b 2215-2218
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.5",
+  "base_commit_sha": "ce4c28652be4d436f1a94399bcc73b37074585e0",
+  "prompts": {},
+  "sessions": {
+    "s_3e4977bdcf79d3": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f1b87-44c9-7cd3-a663-19b9c3af6ec4",
+        "model": "unknown"
+      },
+      "human_author": "vuuihc <vuuihc@users.noreply.github.com>"
+    }
+  },
+  "attestation_metadata": {},
+  "remote_transcripts": {}
+}
