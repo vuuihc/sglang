@@ -1,0 +1,21 @@
+test/registered/unit/mem_cache/test_unified_radix_cache_unittest.py
+  s_11d1abd9c5cff5::t_a42979a001d064 2395
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "887525d54c433d46a5bd416a926b3717ebcfe283",
+  "prompts": {},
+  "sessions": {
+    "s_11d1abd9c5cff5": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f4b61-3e88-7bb3-954b-82eddd66d571",
+        "model": "unknown"
+      },
+      "human_author": "vuuihc <vuuihc@users.noreply.github.com>"
+    }
+  },
+  "attestation_metadata": {},
+  "remote_transcripts": {}
+}
