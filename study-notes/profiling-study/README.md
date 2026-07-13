@@ -13,6 +13,8 @@
 3. [03-实验数据与分析.md](03-实验数据与分析.md) — 实测数据 + GPU 利用率分析(host-bound→compute-bound、cuda graph 开/关对比)
 4. [04-结论与下一步.md](04-结论与下一步.md) — 诚实的结论、假阳性教训、可提交 PR 真正藏在哪
 5. [05-serving路径分析.md](05-serving路径分析.md) — 抓 scheduler 进程 trace,看 host 侧到底在干什么(本系列的实测高潮)
+6. [06-qwen3.6-35b-a3b-fp8-单卡serving实录.md](06-qwen3.6-35b-a3b-fp8-单卡serving实录.md) — FP8+MoE+混合线性注意力的端到端实录(环境坑、kernel 画像、127 万 KV)
+7. [07-h20单卡实验矩阵-两面墙与KV-scaling.md](07-h20单卡实验矩阵-两面墙与KV-scaling.md) — dmon 硬件计数器坐实两面墙、KV scaling 曲线(4K→120K)、关图归因、三个系统级发现(数据在 `contribution-scan/exp2-h20/`)
 
 ## 配套原始数据(在仓库 `.contribution-scan/` 下)
 

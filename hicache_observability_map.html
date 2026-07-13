@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SGLang HiCache Observability Map</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --panel: #111c33;
+      --panel2: #17243d;
+      --ink: #e5edf7;
+      --muted: #9fb0c7;
+      --line: #2b3d5e;
+      --blue: #60a5fa;
+      --cyan: #22d3ee;
+      --green: #34d399;
+      --yellow: #fbbf24;
+      --red: #fb7185;
+      --purple: #c084fc;
+      --chip: #243654;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 20% 0%, rgba(96, 165, 250, 0.18), transparent 32rem),
+        radial-gradient(circle at 85% 8%, rgba(34, 211, 238, 0.12), transparent 30rem),
+        var(--bg);
+      color: var(--ink);
+      font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    a { color: var(--cyan); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 40px 28px 22px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 32px;
+      letter-spacing: -0.03em;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 22px;
+      letter-spacing: -0.02em;
+    }
+
+    h3 {
+      margin: 18px 0 10px;
+      font-size: 16px;
+      color: #dbeafe;
+    }
+
+    p { margin: 8px 0; }
+    code {
+      color: #dbeafe;
+      background: rgba(148, 163, 184, 0.14);
+      padding: 1px 5px;
+      border-radius: 5px;
+      font-size: 0.92em;
+    }
+
+    .subtitle {
+      max-width: 900px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .wrap {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 0 28px 48px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+    .card {
+      background: linear-gradient(180deg, rgba(23, 36, 61, 0.96), rgba(17, 28, 51, 0.96));
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.24);
+    }
+
+    .mini {
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: rgba(36, 54, 84, 0.62);
+      border: 1px solid rgba(148, 163, 184, 0.18);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      background: rgba(36, 54, 84, 0.72);
+      color: #dce8f7;
+      border-radius: 999px;
+      padding: 4px 9px;
+      margin: 3px 4px 3px 0;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .badge.blue { border-color: rgba(96, 165, 250, 0.5); }
+    .badge.green { border-color: rgba(52, 211, 153, 0.5); }
+    .badge.yellow { border-color: rgba(251, 191, 36, 0.5); }
+    .badge.purple { border-color: rgba(192, 132, 252, 0.5); }
+    .badge.red { border-color: rgba(251, 113, 133, 0.5); }
+
+    .section { margin-top: 22px; }
+
+    .diagram {
+      position: relative;
+      overflow: hidden;
+      padding: 22px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(6, 12, 26, 0.34);
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    .node {
+      min-height: 96px;
+      padding: 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(148, 163, 184, 0.22);
+      background: rgba(23, 36, 61, 0.84);
+    }
+
+    .node strong {
+      display: block;
+      margin-bottom: 6px;
+      color: white;
+    }
+
+    .node small {
+      color: var(--muted);
+      display: block;
+    }
+
+    .arrow {
+      color: var(--cyan);
+      text-align: center;
+      font-size: 22px;
+      padding: 3px 0 10px;
+    }
+
+    .lane {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 1.2fr;
+      gap: 12px;
+      align-items: center;
+      margin-top: 14px;
+    }
+
+    .pipe {
+      height: 7px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--green), var(--cyan), var(--blue));
+      position: relative;
+    }
+
+    .pipe.reverse {
+      background: linear-gradient(90deg, var(--blue), var(--cyan), var(--green));
+    }
+
+    .pipe::after {
+      content: "";
+      position: absolute;
+      right: -1px;
+      top: -5px;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-left: 12px solid var(--blue);
+    }
+
+    .pipe.reverse::after {
+      left: -1px;
+      right: auto;
+      border-left: 0;
+      border-right: 12px solid var(--green);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+    }
+
+    th, td {
+      padding: 10px 11px;
+      text-align: left;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+      vertical-align: top;
+    }
+
+    th {
+      color: #dbeafe;
+      background: rgba(30, 41, 59, 0.75);
+      font-size: 13px;
+    }
+
+    tr:last-child td { border-bottom: 0; }
+    td { color: #d7e2f1; }
+    td:nth-child(2), td:nth-child(3) { color: var(--muted); }
+
+    .timeline {
+      display: grid;
+      gap: 12px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 14px;
+      align-items: start;
+      padding: 13px 0;
+      border-bottom: 1px dashed rgba(148, 163, 184, 0.22);
+    }
+
+    .step:last-child { border-bottom: 0; }
+
+    .step .label {
+      color: #bfdbfe;
+      font-weight: 700;
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .callout {
+      border-left: 4px solid var(--cyan);
+      padding: 12px 14px;
+      background: rgba(34, 211, 238, 0.08);
+      border-radius: 12px;
+      color: #dff7ff;
+    }
+
+    .warn {
+      border-left-color: var(--yellow);
+      background: rgba(251, 191, 36, 0.08);
+      color: #fff7d6;
+    }
+
+    .ok {
+      border-left-color: var(--green);
+      background: rgba(52, 211, 153, 0.08);
+      color: #defcf0;
+    }
+
+    .metric {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      padding: 12px;
+      border-radius: 12px;
+      background: rgba(15, 23, 42, 0.46);
+      border: 1px solid rgba(148, 163, 184, 0.14);
+      margin-bottom: 10px;
+    }
+
+    .metric .name {
+      color: #dbeafe;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 13px;
+    }
+
+    .metric .type {
+      color: var(--green);
+      font-size: 12px;
+      border: 1px solid rgba(52, 211, 153, 0.35);
+      border-radius: 999px;
+      padding: 2px 7px;
+      height: max-content;
+    }
+
+    .legend {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+      border-radius: 50%;
+      margin-right: 6px;
+      vertical-align: -1px;
+    }
+
+    .dot.blue { background: var(--blue); }
+    .dot.green { background: var(--green); }
+    .dot.yellow { background: var(--yellow); }
+    .dot.purple { background: var(--purple); }
+    .dot.red { background: var(--red); }
+
+    @media (max-width: 900px) {
+      .grid.two, .grid.three, .flow, .lane { grid-template-columns: 1fr; }
+      .step { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SGLang HiCache Observability Map</h1>
+    <p class="subtitle">
+      这张图把 HiCache 的 cache 层级、CLI 参数传递、#26974 + reviewer follow-up 的 L1/L2 metrics，
+      以及当前 OpenTelemetry trace 覆盖范围放在同一页。它刻意区分：<b>transfer metrics</b>、<b>storage metrics</b>、<b>request trace</b>。
+    </p>
+    <div>
+      <span class="badge blue">当前 main: 旧 load_back metric 仍是 CPU dispatch timing</span>
+      <span class="badge green">#26974: 新增 L1/L2 transfer metrics</span>
+      <span class="badge yellow">hxieustc#2: 修 enable_timing + metrics threading</span>
+      <span class="badge purple">trace: request / mooncake 模块</span>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="section card">
+      <h2>1. Cache 结构、路径、CLI 参数与传递</h2>
+      <div class="diagram">
+        <div class="flow">
+          <div class="node">
+            <strong>CLI / ServerArgs</strong>
+            <small>
+              <code>--enable-hierarchical-cache</code><br />
+              <code>--hicache-ratio</code>, <code>--hicache-size</code><br />
+              <code>--hicache-write-policy</code><br />
+              <code>--hicache-io-backend</code>, <code>--hicache-mem-layout</code><br />
+              <code>--hicache-storage-backend</code><br />
+              <code>--enable-metrics</code>, <code>--extra-metric-labels</code>
+            </small>
+          </div>
+          <div class="node">
+            <strong>CacheInitParams / registry</strong>
+            <small>
+              <code>kv_cache_builder.py</code> 生成 <code>CacheInitParams</code><br />
+              <code>registry.py</code> 按模型/环境选择 cache<br />
+              unified / legacy / hybrid / mamba 分支
+            </small>
+          </div>
+          <div class="node">
+            <strong>HiCache controller</strong>
+            <small>
+              <code>HiCacheController</code> 或 <code>HybridCacheController</code><br />
+              管理 <code>load_queue</code> / <code>write_queue</code><br />
+              异步 stream + ACK queue
+            </small>
+          </div>
+        </div>
+
+        <div class="arrow">↓ runtime data movement ↓</div>
+
+        <div class="lane">
+          <div class="node">
+            <strong>L1: GPU KV pool</strong>
+            <small>device KV cache，模型 forward 直接读取。命中时不经过 HiCache transfer。</small>
+          </div>
+          <div>
+            <div class="pipe reverse"></div>
+            <p class="note" style="text-align:center"><code>offload / write-back</code><br />L1 → L2</p>
+            <div class="pipe"></div>
+            <p class="note" style="text-align:center"><code>onboard / load-back</code><br />L2 → L1</p>
+          </div>
+          <div class="node">
+            <strong>L2: host KV pool</strong>
+            <small>CPU pinned/host KV cache。受 <code>hicache_ratio</code> / <code>hicache_size</code> 影响。</small>
+          </div>
+        </div>
+
+        <div class="lane">
+          <div class="node">
+            <strong>L3: storage backend</strong>
+            <small><code>file</code>, <code>mooncake</code>, <code>hf3fs</code>, <code>nixl</code>, <code>aibrix</code>, <code>dynamic</code> 等。</small>
+          </div>
+          <div>
+            <div class="pipe reverse"></div>
+            <p class="note" style="text-align:center">backup / prefetch<br />L2 ↔ L3</p>
+          </div>
+          <div class="node">
+            <strong>Radix / Unified tree</strong>
+            <small>prefix tree 决定哪些 block 在 L1 / L2 / L3，何时 load-back / write-back。</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid two section">
+        <div class="mini">
+          <h3>选择 cache 类型的路径</h3>
+          <div class="timeline">
+            <div class="step">
+              <div class="label">build params</div>
+              <div><code>kv_cache_builder.py</code> 把 <code>server_args.enable_metrics</code>、parallel ranks、page size、pool allocator 等封进 <code>CacheInitParams</code>。</div>
+            </div>
+            <div class="step">
+              <div class="label">choose cache</div>
+              <div><code>mem_cache/registry.py</code> 按 <code>SGLANG_ENABLE_UNIFIED_RADIX_TREE</code>、hybrid SWA/SSM、<code>enable_hierarchical_cache</code> 选择 <code>UnifiedRadixCache</code> / <code>HiRadixCache</code> / <code>HiMambaRadixCache</code>。</div>
+            </div>
+            <div class="step">
+              <div class="label">attach HiCache</div>
+              <div>legacy 路径直接构造 <code>HiCacheController</code>；unified/hybrid 路径通过 <code>init_hicache()</code> 和 <code>hybrid_pool_assembler.py</code> 构造 <code>HybridCacheController</code>。</div>
+            </div>
+            <div class="step">
+              <div class="label">PR threading</div>
+              <div>#26974 follow-up 把 <code>enable_metrics</code> / <code>extra_metric_labels</code> 继续传入 decode-offload 和 hybrid controller，否则这些 stack 只有 debug log，没有 Prometheus series。</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mini">
+          <h3>关键 CLI 参数</h3>
+          <table>
+            <thead>
+              <tr><th>参数</th><th>作用</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><code>--enable-hierarchical-cache</code></td><td>启用 L1 GPU + L2 host + 可选 L3 storage 的 HiCache 路径。</td></tr>
+              <tr><td><code>--hicache-ratio</code> / <code>--hicache-size</code></td><td>控制 host KV pool 大小。</td></tr>
+              <tr><td><code>--hicache-write-policy</code></td><td><code>write_back</code> / <code>write_through</code> / selective，影响 L1→L2 写回时机。</td></tr>
+              <tr><td><code>--hicache-io-backend</code></td><td><code>kernel</code> / <code>direct</code> / <code>kernel_ascend</code>，影响 CPU↔GPU copy 实现。</td></tr>
+              <tr><td><code>--hicache-mem-layout</code></td><td>host memory layout：layer/page/head 等。</td></tr>
+              <tr><td><code>--hicache-storage-backend</code></td><td>启用 L3 storage backend，和 storage metrics / mooncake trace 更相关。</td></tr>
+              <tr><td><code>--enable-metrics</code></td><td>启用 Prometheus metrics collector；#26974 的 L1/L2 series 也受它控制。</td></tr>
+              <tr><td><code>--enable-trace</code></td><td>启用 OpenTelemetry trace，和 Prometheus metrics 是两套观测系统。</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2>2. #26974 / follow-up 增加的 metric 范围和值</h2>
+      <div class="grid two">
+        <div>
+          <div class="callout ok">
+            <b>设计目标：</b>把每次 HiCache L1↔L2 搬运从“异步 ACK 完成”升级为“可统计的 transfer event”：方向、blocks、bytes、duration、bandwidth。
+          </div>
+          <h3>覆盖范围</h3>
+          <table>
+            <thead>
+              <tr><th>方向</th><th>路径</th><th>含义</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>direction="offload"</code></td>
+                <td>L1 GPU → L2 host</td>
+                <td>write-back / write-through，把 device KV block 备份到 host。</td>
+              </tr>
+              <tr>
+                <td><code>direction="onboard"</code></td>
+                <td>L2 host → L1 GPU</td>
+                <td>load-back，把 evicted prefix 对应 KV block 重新搬回 GPU。</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>计时边界</h3>
+          <div class="timeline">
+            <div class="step">
+              <div class="label">write path</div>
+              <div><code>start_writing()</code> 创建 <code>Event(enable_timing=True)</code> 的 start/finish，围住 L1→L2 copy stream。</div>
+            </div>
+            <div class="step">
+              <div class="label">load path</div>
+              <div><code>LayerLoadingEvent.start_event</code> 和最后一层 <code>load_event</code> 使用 <code>enable_timing=True</code>，作为 L2→L1 elapsed-time pair。</div>
+            </div>
+            <div class="step">
+              <div class="label">ACK complete</div>
+              <div><code>loading_check()</code> / <code>writing_check()</code> 在 ACK 完成后调用 <code>record_l1_l2_transfer_complete()</code>。</div>
+            </div>
+            <div class="step">
+              <div class="label">fallback</div>
+              <div>如果 backend 不支持 <code>elapsed_time()</code>，仍可退到 host wall-clock；但 CUDA 正常路径应走 timing event。</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3>Prometheus series</h3>
+          <div class="metric">
+            <div>
+              <div class="name">sglang:hicache_l1_l2_transfer_blocks_total</div>
+              <div class="note">累计 KV blocks，适合看每个方向搬运压力。</div>
+            </div>
+            <div class="type">Counter</div>
+          </div>
+          <div class="metric">
+            <div>
+              <div class="name">sglang:hicache_l1_l2_transfer_bytes_total</div>
+              <div class="note">累计估算 bytes，来自 <code>token_count × bytes_per_token</code>，包含 draft pool。</div>
+            </div>
+            <div class="type">Counter</div>
+          </div>
+          <div class="metric">
+            <div>
+              <div class="name">sglang:hicache_l1_l2_transfer_duration_us</div>
+              <div class="note">单次 transfer duration histogram；<code>_sum</code> 和 <code>_count</code> 可算平均时间。</div>
+            </div>
+            <div class="type">Histogram</div>
+          </div>
+
+          <h3>Labels</h3>
+          <div>
+            <span class="badge green">direction</span>
+            <span class="badge green">src</span>
+            <span class="badge green">dst</span>
+            <span class="badge blue">tp_rank / tp_size</span>
+            <span class="badge blue">dp_rank</span>
+            <span class="badge blue">pp_rank / pp_size</span>
+            <span class="badge purple">attn_cp_rank / attn_cp_size</span>
+            <span class="badge yellow">io_backend</span>
+            <span class="badge yellow">extra_metric_labels</span>
+          </div>
+
+          <h3>Reviewer 实测值</h3>
+          <table>
+            <thead>
+              <tr><th>场景</th><th>值</th><th>解释</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Qwen3-0.6B bytes/token</td><td><code>114688</code></td><td>2 × 28 layers × 8 KV heads × 128 dim × 2B。</td></tr>
+              <tr><td>1536-token onboard</td><td><code>24 blocks</code></td><td>page size 64，1536 / 64 = 24。</td></tr>
+              <tr><td>错误计时前</td><td><code>5.75s</code>, 0.03GB/s</td><td>ACK idle-gap 被 host fallback 算进去了。</td></tr>
+              <tr><td>enable_timing 后</td><td><code>6.8ms</code>, 25.98GB/s</td><td>CUDA event 测到真实 H2D DMA 级别。</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="grid two section">
+        <div class="callout">
+          <b>为什么它比旧 <code>load_back_duration_seconds</code> 更“完整”？</b>
+          它不是只看 load-back，而是看 L1/L2 双向数据运动；不仅有 duration，还有 blocks、bytes、bandwidth 和 rank/backend labels。
+          对诊断“搬得多”还是“带宽差”更直接。
+        </div>
+        <div class="callout warn">
+          <b>为什么它不应完全替代旧 metric？</b>
+          新 metric 是 transfer-level；旧 <code>load_back_duration_seconds</code> 可以被重新定义为 cache-visible latency，
+          包括排队、调度、ACK 被 poll 的等待。这样两者才不重复。
+        </div>
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2>3. 当前项目 trace / metrics 覆盖范围</h2>
+      <div class="grid three">
+        <div class="mini">
+          <h3><span class="dot purple"></span>OpenTelemetry trace</h3>
+          <p>
+            通过 <code>--enable-trace</code> 打开，<code>--trace-modules</code> 目前支持
+            <code>request</code> 和 <code>mooncake</code>，输出到 <code>--otlp-traces-endpoint</code>。
+          </p>
+          <p class="note">
+            trace 以 request/root span 为中心，覆盖 API/tokenizer、DP dispatch、scheduler queue、prefill/decode forward、spec draft/verify 等。
+          </p>
+        </div>
+        <div class="mini">
+          <h3><span class="dot green"></span>Prometheus metrics</h3>
+          <p>
+            通过 <code>--enable-metrics</code> 打开。已有 request/scheduler/cache/storage metrics；
+            #26974 新增 L1/L2 transfer metrics。
+          </p>
+          <p class="note">
+            metrics 适合 dashboard / alert / aggregate；trace 适合单请求链路和跨线程/跨服务关联。
+          </p>
+        </div>
+        <div class="mini">
+          <h3><span class="dot yellow"></span>Profiler / Chrome trace</h3>
+          <p>
+            Torch profiler、ROCm RPD 和 trace merger 生成的是 profiling trace，
+            主要用于性能剖析，不等同于 OpenTelemetry request trace。
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <table>
+          <thead>
+            <tr>
+              <th>观测面</th>
+              <th>当前覆盖</th>
+              <th>HiCache 相关性</th>
+              <th>主要缺口</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Request trace</td>
+              <td>request start/finish、tokenize、API dispatch、DP dispatch、waiting、prefill/decode forward、decode loop、schedule events、speculative draft/verify。</td>
+              <td>能看到请求级等待/forward，但不直接知道 L1/L2 搬了多少 bytes。</td>
+              <td>没有把 HiCache load-back/offload 作为 per-request span 显式挂上去。</td>
+            </tr>
+            <tr>
+              <td>Mooncake trace</td>
+              <td><code>trace_modules=mooncake</code> 下覆盖 Mooncake send/transfer slice。</td>
+              <td>更偏 L3/跨节点 KV transfer；和 HiCache storage backend 有交集。</td>
+              <td>非 Mooncake storage backend 的 tracing 覆盖不对称。</td>
+            </tr>
+            <tr>
+              <td>Storage metrics</td>
+              <td>prefetch/backup pages、bandwidth、tokens 等，backend 包括 Mooncake/HF3FS 等。</td>
+              <td>覆盖 L2↔L3，不覆盖 L1↔L2 DMA。</td>
+              <td>更适合 aggregate，不提供单请求 trace 链接。</td>
+            </tr>
+            <tr>
+              <td>L1/L2 transfer metrics</td>
+              <td>#26974 新增 offload/onboard blocks、bytes、duration histogram。</td>
+              <td>正中 HiCache CPU↔GPU transfer；修 <code>enable_timing=True</code> 后可算真实带宽。</td>
+              <td>仍是 aggregate metrics；不是 request trace span。</td>
+            </tr>
+            <tr>
+              <td>旧 load_back metric</td>
+              <td><code>sglang:load_back_duration_seconds</code> 当前 main 在 <code>load_back()</code> 中用 CPU wall-clock 包 dispatch。</td>
+              <td>现在语义偏“调度/dispatch 开销”，不是 DMA，也不是完整 cache-visible latency。</td>
+              <td>可以改造成 cache-level load-back latency，和新 L1/L2 transfer metric 拉开边界。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid two section">
+        <div class="mini">
+          <h3>推荐的最终语义分工</h3>
+          <div class="timeline">
+            <div class="step">
+              <div class="label">DMA health</div>
+              <div><code>hicache_l1_l2_transfer_duration_us</code> + bytes/blocks：纯 transfer 层，回答“带宽健康吗”。</div>
+            </div>
+            <div class="step">
+              <div class="label">Cache impact</div>
+              <div><code>load_back_duration_seconds</code>：cache 可见的 load-back latency，回答“请求被 load-back 拖了多久”。</div>
+            </div>
+            <div class="step">
+              <div class="label">Request story</div>
+              <div>OpenTelemetry request trace：回答“这个请求在哪个阶段慢”，未来可补 HiCache span。</div>
+            </div>
+          </div>
+        </div>
+        <div class="mini">
+          <h3>如果后续做你的 PR</h3>
+          <div class="callout ok">
+            建议不要再和 #26974 争“旧 metric 也测 DMA”。更科学的 follow-up 是：
+            <br /><br />
+            <code>load_back_duration_seconds = cache-visible load-back latency</code>
+            <br /><br />
+            也就是从 <code>load_back()</code> 记录开始时间，到 <code>loading_check()</code> 消费 ACK 时 observe。
+            这样它自然包含排队、调度、DMA 和 ACK polling delay，和 L1/L2 transfer metrics 形成互补。
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

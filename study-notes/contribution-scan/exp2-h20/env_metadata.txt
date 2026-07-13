@@ -1,0 +1,18 @@
+spawn ssh -o StrictHostKeyChecking=accept-new -p 47720 root@region-42.seetacloud.com /root/miniconda3/bin/pip list 2>/dev/null | grep -Ei "sglang|torch|flashinfer|deep|triton|sgl" ; nvidia-smi --query-gpu=name,memory.total,clocks.max.sm,clocks.max.mem --format=csv
+root@region-42.seetacloud.com's password: 
+flashinfer-cubin               0.6.12
+flashinfer-python              0.6.12
+sgl-deep-gemm                  0.1.2
+sglang                         0.5.13.post1
+sglang-kernel                  0.4.3
+tokenspeed-triton              3.7.10.post20260531
+torch                          2.11.0
+torch_c_dlpack_ext             0.1.5
+torch_memory_saver             0.0.9.post1
+torchao                        0.17.0
+torchaudio                     2.11.0
+torchcodec                     0.11.1
+torchvision                    0.26.0
+triton                         3.6.0
+name, memory.total [MiB], clocks.max.sm [MHz], clocks.max.memory [MHz]
+NVIDIA H20, 97871 MiB, 1980 MHz, 2619 MHz

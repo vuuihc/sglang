@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root{
+    --navy:#12283f; --navy2:#0d1f31; --line:rgba(150,200,255,.22);
+    --ink:#eaf3ff; --sub:#9fc0e6; --cyan:#5fd0e6; --amber:#f5a623; --amber2:#ffcf6b;
+    --tierA:#173753; --tierB:#153a4a; --tierC:#3a2f18; --tierD:#173753; --tierE:#123a44;
+  }
+  html,body{ background:#06121f; }
+  .page{
+    width:1080px; height:1920px; position:relative; overflow:hidden;
+    background:
+      radial-gradient(1200px 900px at 50% -10%, #1b3a5c 0%, var(--navy) 45%, var(--navy2) 100%);
+    color:var(--ink);
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,sans-serif;
+    padding:56px 60px 48px;
+  }
+  /* blueprint grid */
+  .page::before{
+    content:""; position:absolute; inset:0; pointer-events:none;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size:54px 54px; opacity:.5;
+    mask-image:radial-gradient(1300px 1600px at 50% 40%, #000 60%, transparent 100%);
+  }
+  .corner{ position:absolute; width:34px; height:34px; border:2px solid var(--cyan); opacity:.55; }
+  .corner.tl{ top:26px; left:26px; border-right:0; border-bottom:0;}
+  .corner.tr{ top:26px; right:26px; border-left:0; border-bottom:0;}
+  .corner.bl{ bottom:26px; left:26px; border-right:0; border-top:0;}
+  .corner.br{ bottom:26px; right:26px; border-left:0; border-top:0;}
+  .wrap{ position:relative; z-index:2; display:flex; flex-direction:column; height:100%; }
+
+  .eyebrow{ font-size:19px; letter-spacing:5px; color:var(--cyan); font-weight:600; }
+  h1{ font-size:60px; font-weight:800; line-height:1.14; margin:10px 0 6px; letter-spacing:1px; }
+  h1 .hl{ color:var(--amber2); }
+  .subtitle{ font-size:23px; color:var(--sub); letter-spacing:1px; margin-bottom:22px;}
+
+  /* two walls */
+  .walls{ display:flex; gap:26px; margin-bottom:14px; }
+  .wall{ flex:1; border:1.5px solid var(--line); border-radius:12px; padding:20px 22px; position:relative;
+         background:linear-gradient(180deg, rgba(30,60,95,.55), rgba(18,40,63,.35)); }
+  .wall .brick{ position:absolute; inset:0; border-radius:12px; opacity:.16; pointer-events:none;
+     background:
+       repeating-linear-gradient(0deg, transparent 0 26px, rgba(150,200,255,.5) 26px 27px),
+       repeating-linear-gradient(90deg, transparent 0 60px, rgba(150,200,255,.5) 60px 61px); }
+  .wall .tag{ font-size:15px; letter-spacing:3px; color:var(--cyan); font-weight:700; }
+  .wall .zh{ font-size:31px; font-weight:800; margin:6px 0 4px; }
+  .wall .desc{ font-size:17px; color:var(--sub); line-height:1.35; }
+  .wall.amber .zh{ color:var(--amber2);} .wall.amber .tag{ color:var(--amber);}
+
+  .flowbar{ display:flex; gap:26px; margin-bottom:26px; }
+  .flow{ flex:1; font-size:17px; color:var(--sub); border-left:3px solid var(--cyan); padding:6px 0 6px 14px; }
+  .flow b{ color:var(--ink); font-weight:700;}
+  .flow.amber{ border-left-color:var(--amber);} .flow.amber b{ color:var(--amber2);}
+  .flow .util{ color:var(--amber2); font-weight:700; }
+
+  .verbs-hd{ display:flex; align-items:center; justify-content:space-between; margin-bottom:14px;}
+  .verbs-hd .t{ font-size:22px; font-weight:800; letter-spacing:1px; }
+  .verbs-hd .chain{ font-size:17px; color:var(--cyan); letter-spacing:1px;}
+  .verbs-hd .chain .amber{ color:var(--amber2); }
+  .cheaper{ font-size:15px; color:var(--sub); }
+
+  .tiers{ display:flex; flex-direction:column; gap:14px; flex:1; }
+  .tier{ position:relative; border:1.5px solid var(--line); border-radius:14px;
+         padding:18px 22px 18px 96px; display:flex; flex-direction:column; justify-content:center;
+         background:var(--tierA); flex:1 1 0; min-height:0; }
+  .tier .num{ position:absolute; left:20px; top:50%; transform:translateY(-50%);
+      width:56px; height:56px; border:2px solid var(--cyan); border-radius:50%;
+      display:flex; align-items:center; justify-content:center; font-size:28px; font-weight:800; color:var(--cyan);}
+  .tier .head{ display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; }
+  .tier .verb{ font-size:34px; font-weight:800; letter-spacing:1px;}
+  .tier .gloss{ font-size:18px; color:var(--sub); }
+  .tier .badge{ font-size:14px; font-weight:800; color:#20140a; background:var(--amber);
+      padding:3px 10px; border-radius:20px; letter-spacing:1px;}
+  .tier .tags{ margin-top:9px; font-size:19px; color:var(--ink); letter-spacing:.3px; line-height:1.5;}
+  .tier .tags .en{ color:var(--cyan); }
+  .tier.b{ background:var(--tierB);} .tier.c{ background:var(--tierC);}
+  .tier.d{ background:var(--tierD);} .tier.e{ background:var(--tierE);}
+  .tier.star{ border-color:var(--amber); box-shadow:0 0 0 1px rgba(245,166,35,.35) inset;}
+  .tier.star .num{ border-color:var(--amber); color:var(--amber2);}
+  .tier.star .verb{ color:var(--amber2);}
+  .tier.star .tags .en{ color:var(--amber2);}
+
+  .footer{ margin-top:18px; border:1.5px dashed var(--cyan); border-radius:12px;
+     padding:16px 22px; font-size:23px; text-align:center; letter-spacing:1px; color:var(--ink);
+     background:rgba(20,45,70,.4);}
+  .footer b{ color:var(--amber2); }
+  .credit{ margin-top:10px; text-align:right; font-size:14px; color:var(--sub); letter-spacing:2px;}
+</style>
+</head>
+<body>
+<div class="page">
+  <span class="corner tl"></span><span class="corner tr"></span>
+  <span class="corner bl"></span><span class="corner br"></span>
+  <div class="wrap">
+    <div class="eyebrow">LLM INFERENCE OPTIMIZATION</div>
+    <h1>大模型推理优化<br><span class="hl">只有五个动词</span></h1>
+    <div class="subtitle">一套框架，看懂所有推理优化技术</div>
+
+    <!-- two walls -->
+    <div class="walls">
+      <div class="wall">
+        <div class="brick"></div>
+        <div class="tag">COMPUTE-BOUND</div>
+        <div class="zh">算力墙</div>
+        <div class="desc">计算量太大，算力先到顶</div>
+      </div>
+      <div class="wall amber">
+        <div class="brick"></div>
+        <div class="tag">MEMORY-BOUND</div>
+        <div class="zh">访存墙</div>
+        <div class="desc">数据搬不过来，算力在干等</div>
+      </div>
+    </div>
+    <div class="flowbar">
+      <div class="flow"><b>Prefill</b>　一次处理几千 token　──▶　撞【算力墙】</div>
+      <div class="flow amber"><b>Decode</b>　一次1个token却要搬整个模型　──▶　撞【访存墙】<span class="util"> 利用率常&lt;5%</span></div>
+    </div>
+
+    <div class="verbs-hd">
+      <div class="t">五个动词 · 按优先级</div>
+      <div class="chain">不算→少算→<span class="amber">少搬</span>→打满→<span class="amber">破串行</span></div>
+    </div>
+    <div class="cheaper" style="margin-bottom:6px;">↓ 越靠前越便宜　省下来的永远比优化过的划算</div>
+
+    <div class="tiers">
+      <div class="tier">
+        <div class="num">1</div>
+        <div class="head"><span class="verb">不算</span><span class="gloss">能不算就不算 · 复用已有结果</span></div>
+        <div class="tags"><span class="en">KV Cache</span> · <span class="en">PagedAttention</span> · <span class="en">Radix Cache</span> · Prompt Caching</div>
+      </div>
+      <div class="tier b">
+        <div class="num">2</div>
+        <div class="head"><span class="verb">少算</span><span class="gloss">省 FLOPs · 治算力墙</span></div>
+        <div class="tags">量化 <span class="en">FP8/AWQ/GPTQ</span> · 稀疏注意力 · <span class="en">MoE</span></div>
+      </div>
+      <div class="tier c star">
+        <div class="num">3</div>
+        <div class="head"><span class="verb">少搬</span><span class="gloss">省带宽</span><span class="badge">★ DECODE 主战场</span></div>
+        <div class="tags"><span class="en">MLA</span> · <span class="en">GQA/MQA</span> · KV量化 · KV卸载(<span class="en">HiCache</span>) · <span class="en">FlashAttention</span> · 算子融合</div>
+      </div>
+      <div class="tier d">
+        <div class="num">4</div>
+        <div class="head"><span class="verb">打满</span><span class="gloss">别让硬件空转</span></div>
+        <div class="tags"><span class="en">Continuous Batching</span> · <span class="en">TP/PP/EP</span> · PD分离 · <span class="en">CUDA Graph</span> · <span class="en">Overlap</span></div>
+      </div>
+      <div class="tier e star">
+        <div class="num">5</div>
+        <div class="head"><span class="verb">破串行</span><span class="gloss">打掉自回归延迟地板</span><span class="badge">★ 用免费算力换延迟</span></div>
+        <div class="tags"><span class="en">Speculative Decoding</span> · <span class="en">Medusa/EAGLE</span> · <span class="en">MTP</span> · Lookahead</div>
+      </div>
+    </div>
+
+    <div class="footer">撞哪面墙？→ 该用哪个动词？<br><b>这就是判断任何新技术的坐标系。</b></div>
+    <div class="credit">study-notes / 推理优化五个动词</div>
+  </div>
+</div>
+</body>
+</html>
