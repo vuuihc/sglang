@@ -280,9 +280,14 @@ class TestReleaseFinishedReq(unittest.TestCase):
             8,
         )
         manager.cache_controller = MagicMock()
-        manager.cache_controller.ack_write_queue = [
-            HiCacheAck(None, _FinishedEvent(), [7])
-        ]
+        ack = HiCacheAck(
+            None,
+            _FinishedEvent(),
+            [7],
+            num_tokens_by_pool={"kv": 4},
+            num_bytes=1024,
+        )
+        manager.cache_controller.ack_write_queue = [ack]
         manager._trigger_backup = MagicMock(return_value="last_hash")
 
         manager._check_offload_progress(1)
@@ -290,6 +295,7 @@ class TestReleaseFinishedReq(unittest.TestCase):
         self.assertEqual(freed, [])
         manager.req_to_token_pool.free.assert_not_called()
         self.assertNotIn(req.rid, manager.offload_inflight)
+        manager.tree_cache.update_backup_metrics.assert_called_once_with(ack)
 
     def test_offload_kv_cache_tracks_inflight_write_until_ack(self):
         manager, freed = _make_manager(pool_size=32, page_size=4)

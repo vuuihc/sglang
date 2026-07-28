@@ -253,6 +253,7 @@ class DecodeKVCacheOffloadManager:
                     state = self.offloaded_state.get(req.rid)
                     start_offset = state.prefill_len if state is not None else start
                     self._release_finished_req(req, start_offset)
+            self.tree_cache.update_backup_metrics(ack)
             finish_count -= 1
 
     def _release_finished_req(self, req: Req, start_offset: int):

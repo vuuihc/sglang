@@ -2,7 +2,7 @@
 
 import unittest
 from types import SimpleNamespace
-from unittest.mock import MagicMock, patch
+from unittest.mock import MagicMock, call, patch
 
 import torch
 
@@ -118,6 +118,34 @@ class TestLoadBackDurationMetric(CustomTestCase):
         )
         stub.metrics_collector.observe_load_back_duration.assert_not_called()
         self.assertEqual(stub.cache_controller.ack_load_queue, [])
+
+    def test_backup_metrics_observe_volume_and_duration(self):
+        from sglang.srt.mem_cache.base_prefix_cache import BasePrefixCache
+
+        start, finish = self._completed_pair()
+        ack = self.cc.HiCacheAck(
+            start_event=start,
+            finish_event=finish,
+            node_ids=[1],
+            num_tokens_by_pool={"kv": 1024, "mamba": 1},
+            num_bytes=4096,
+            timing_enabled=True,
+        )
+        stub = SimpleNamespace(metrics_collector=MagicMock())
+
+        BasePrefixCache.update_backup_metrics(stub, ack)
+
+        self.assertEqual(
+            stub.metrics_collector.increment_backup_num_tokens.call_args_list,
+            [
+                call(num_tokens=1024, pool="kv"),
+                call(num_tokens=1, pool="mamba"),
+            ],
+        )
+        stub.metrics_collector.increment_backup_num_bytes.assert_called_once_with(4096)
+        stub.metrics_collector.observe_backup_duration.assert_called_once()
+        (observed,), _ = stub.metrics_collector.observe_backup_duration.call_args
+        self.assertGreater(observed, 0.0)
 
 
 if __name__ == "__main__":
